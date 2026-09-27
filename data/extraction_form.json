@@ -1,0 +1,216 @@
+{
+  "extraction_form_version": "1.0",
+  "fields": [
+    {
+      "name": "tool_name",
+      "type": "string",
+      "description": "Tool identifier"
+    },
+    {
+      "name": "category",
+      "type": "enum",
+      "values": [
+        "open_source",
+        "commercial"
+      ],
+      "description": "Open source or commercial"
+    },
+    {
+      "name": "industry",
+      "type": "enum",
+      "values": [
+        "motor_em",
+        "pcb_eda",
+        "multiphysics",
+        "thermal_cfd",
+        "structure_fea",
+        "optics_tcad",
+        "manufacturing",
+        "power_circuit",
+        "open_cae",
+        "ic_eda",
+        "qt_framework"
+      ],
+      "description": "Engineering domain"
+    },
+    {
+      "name": "ui_technology",
+      "type": "enum",
+      "values": [
+        "qt",
+        "wpf",
+        "electron",
+        "motif",
+        "python",
+        "java",
+        "custom"
+      ],
+      "description": "Primary UI technology stack"
+    },
+    {
+      "name": "ui_pattern",
+      "type": "enum",
+      "values": [
+        "workbench",
+        "ribbon",
+        "menu",
+        "panel_system",
+        "tree_based",
+        "schematic",
+        "template_driven",
+        "single_doc",
+        "multi_tool",
+        "hybrid"
+      ],
+      "description": "Primary UI architecture pattern"
+    },
+    {
+      "name": "architecture",
+      "type": "enum",
+      "values": [
+        "monolithic",
+        "layered",
+        "microkernel",
+        "plugin_based"
+      ],
+      "description": "Overall software architecture"
+    },
+    {
+      "name": "plugin_mechanism",
+      "type": "enum",
+      "values": [
+        "osgi",
+        "custom",
+        "ipc_api",
+        "none"
+      ],
+      "description": "Plugin/extension mechanism"
+    },
+    {
+      "name": "scripting",
+      "type": "enum",
+      "values": [
+        "python",
+        "tcl",
+        "vba",
+        "java",
+        "pcl",
+        "command_file",
+        "none"
+      ],
+      "description": "Primary scripting language"
+    },
+    {
+      "name": "coupling",
+      "type": "enum",
+      "values": [
+        "single_kernel",
+        "co_simulation",
+        "file_exchange",
+        "rom",
+        "orchestration"
+      ],
+      "description": "Multi-physics coupling strategy"
+    },
+    {
+      "name": "workflow_guide",
+      "type": "bool",
+      "description": "Has guided workflow?"
+    },
+    {
+      "name": "template_support",
+      "type": "bool",
+      "description": "Has simulation templates?"
+    },
+    {
+      "name": "cloud_support",
+      "type": "bool",
+      "description": "Has cloud deployment?"
+    },
+    {
+      "name": "ai_ml",
+      "type": "bool",
+      "description": "Has AI/ML integration?"
+    },
+    {
+      "name": "validation_years",
+      "type": "int",
+      "description": "Years of industrial validation"
+    },
+    {
+      "name": "source_url",
+      "type": "string",
+      "description": "Official documentation or product page used as the primary extraction source"
+    }
+  ],
+  "statistics_note": "Derived from tool_survey_raw.json (46 tools); recompute with tools/regenerate_stats.py",
+  "statistics": {
+    "total_tools": 46,
+    "by_category": {
+      "commercial": 37,
+      "open_source": 9
+    },
+    "by_industry": {
+      "pcb_eda": 8,
+      "open_cae": 5,
+      "multiphysics": 5,
+      "motor_em": 4,
+      "thermal_cfd": 4,
+      "structure_fea": 4,
+      "optics_tcad": 4,
+      "manufacturing": 4,
+      "power_circuit": 4,
+      "qt_framework": 3,
+      "ic_eda": 1
+    },
+    "by_architecture": {
+      "plugin_based": 21,
+      "layered": 20,
+      "monolithic": 5
+    },
+    "by_ui_technology": {
+      "custom": 34,
+      "qt": 8,
+      "python": 2,
+      "java": 1,
+      "motif": 1
+    },
+    "by_ui_pattern": {
+      "workbench": 20,
+      "hybrid": 7,
+      "tree_based": 5,
+      "ribbon": 4,
+      "multi_tool": 4,
+      "single_doc": 3,
+      "menu": 1,
+      "template_driven": 1,
+      "schematic": 1
+    },
+    "by_plugin_mechanism": {
+      "custom": 40,
+      "none": 5,
+      "ipc_api": 1
+    },
+    "by_scripting": {
+      "python": 30,
+      "command_file": 7,
+      "tcl": 4,
+      "none": 2,
+      "java": 2,
+      "vba": 1
+    },
+    "by_coupling": {
+      "file_exchange": 16,
+      "single_kernel": 14,
+      "co_simulation": 11,
+      "orchestration": 3,
+      "rom": 2
+    },
+    "features": {
+      "workflow_guide_true": 31,
+      "template_support_true": 29,
+      "cloud_support_true": 23,
+      "ai_ml_true": 17
+    }
+  }
+}

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "Industrial Simulation UI & Extension Architecture Survey (46 tools × 15 fields)"
+version: 1.0.0
+date-released: 2026-09-27
+authors:
+  - family-names: Wu
+    given-names: Shouchun
+license: MIT
+url: "https://github.com/daheix/industrial-sim-ui-survey"
+keywords:
+  - simulation-software
+  - empirical-study
+  - user-interface-architecture
+  - plugin-architecture
+  - replication-package
