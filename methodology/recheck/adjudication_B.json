@@ -1,0 +1,148 @@
+{
+  "adjudicator": "B",
+  "decisions": [
+    {
+      "tool_name": "JMAG",
+      "field": "ui_technology",
+      "pass1": "custom",
+      "pass2": "unknown",
+      "final_value": "custom",
+      "decision": "uphold_pass1",
+      "basis": "Official JMAG-Designer pages describe only an 'intuitive interface' and never disclose the GUI framework, so there is no official evidence for any specific stack nor to overturn pass1; since 'unknown' is not a permitted enum value, pass1 is retained.",
+      "source_url": "https://www.jmag-international.com/products/jmag-designer",
+      "confidence": "low"
+    },
+    {
+      "tool_name": "JMAG",
+      "field": "ui_pattern",
+      "pass1": "workbench",
+      "pass2": "unknown",
+      "final_value": "workbench",
+      "decision": "uphold_pass1",
+      "basis": "Official documentation presents JMAG-Designer as the integrated core environment of the JMAG product configuration but states no explicit UI pattern, giving no official basis to overturn pass1; 'unknown' is not a permitted enum value, so pass1 is retained.",
+      "source_url": "https://www.jmag-international.com/products/",
+      "confidence": "low"
+    },
+    {
+      "tool_name": "JMAG",
+      "field": "coupling",
+      "pass1": "file_exchange",
+      "pass2": "single_kernel",
+      "final_value": "single_kernel",
+      "decision": "adopt_pass2",
+      "basis": "Official JMAG multiphysics page states 'Multiple disciplines are closely integrated in JMAG' and documents magnetic-thermal 'strong coupling' within one solver, which directly supports single_kernel over file exchange.",
+      "source_url": "https://www.jmag-international.com/products/jmag-designer/multiphysics/",
+      "confidence": "high"
+    },
+    {
+      "tool_name": "JMAG",
+      "field": "cloud_support",
+      "pass1": false,
+      "pass2": true,
+      "final_value": true,
+      "decision": "adopt_pass2",
+      "basis": "Official JMAG-Express Online product page documents a browser-based JMAG product ('No installation required', usable on tablets/smartphones), overturning pass1=false; confidence medium because the cloud offering is a family member (JMAG-Express Online) rather than JMAG-Designer itself.",
+      "source_url": "https://www.jmag-international.com/express/",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "JMAG",
+      "field": "validation_years",
+      "pass1": 30,
+      "pass2": 43,
+      "final_value": 43,
+      "decision": "adopt_pass2",
+      "basis": "Official JMAG products page states 'Since being released in 1983', giving 2026-1983=43 years since first documented public release, exactly as pass2 computed.",
+      "source_url": "https://www.jmag-international.com/products/",
+      "confidence": "high"
+    },
+    {
+      "tool_name": "MSC Nastran",
+      "field": "ui_technology",
+      "pass1": "motif",
+      "pass2": "unknown",
+      "final_value": "motif",
+      "decision": "uphold_pass1",
+      "basis": "Official Cadence/Hexagon documentation shows MSC Nastran is a text input-deck (Case Control/Bulk Data, DMAP) driven solver with no GUI framework of its own documented (the classic Motif GUI belonged to the separate Patran product), so no official evidence overturns pass1; 'unknown' is not a permitted enum value, so pass1 is retained.",
+      "source_url": "https://www.cadence.com/en_US/home/tools/msc-software/msc-nastran.html",
+      "confidence": "low"
+    },
+    {
+      "tool_name": "MSC Nastran",
+      "field": "ui_pattern",
+      "pass1": "multi_tool",
+      "pass2": "unknown",
+      "final_value": "multi_tool",
+      "decision": "uphold_pass1",
+      "basis": "The solver ships as a command-line engine plus separate job-monitor utility per the official Installation and Operations Guide, with no officially documented unified UI pattern, so pass1 cannot be overturned with official evidence; 'unknown' is not a permitted enum value, so pass1 is retained.",
+      "source_url": "https://nexus.hexagon.com/documentationcenter/en-US/bundle/MSC_Nastran_2025.1_Installation_and_Operations_Guide",
+      "confidence": "low"
+    },
+    {
+      "tool_name": "MSC Nastran",
+      "field": "coupling",
+      "pass1": "file_exchange",
+      "pass2": "co_simulation",
+      "final_value": "co_simulation",
+      "decision": "adopt_pass2",
+      "basis": "The official Cadence MSC Nastran product page lists 'Co-simulate across multiple disciplines' among its key benefits, which is direct vendor documentation of a co-simulation coupling strategy.",
+      "source_url": "https://www.cadence.com/en_US/home/tools/msc-software/msc-nastran.html",
+      "confidence": "high"
+    },
+    {
+      "tool_name": "MSC Nastran",
+      "field": "validation_years",
+      "pass1": 40,
+      "pass2": 55,
+      "final_value": 55,
+      "decision": "adopt_pass2",
+      "basis": "Official MSC Software blog states 'MSC released a commercial version of NASTRAN, MSC Nastran, in 1971', giving 2026-1971=55 years since first documented public release.",
+      "source_url": "https://simulatemore.mscsoftware.com/msc-software-to-celebrate-50-years-of-simulation-innovation-at-2013-user-conference",
+      "confidence": "high"
+    },
+    {
+      "tool_name": "PrePoMax",
+      "field": "industry",
+      "pass1": "open_cae",
+      "pass2": "structure_fea",
+      "final_value": "structure_fea",
+      "decision": "adopt_pass2",
+      "basis": "Official site defines PrePoMax as 'an open-source pre and post-processor for the Calculix FEM solver', i.e., a structural-FEA pre/post-processor rather than a generic open CAE platform, which clearly supports structure_fea.",
+      "source_url": "https://prepomax.fs.um.si/",
+      "confidence": "high"
+    },
+    {
+      "tool_name": "PrePoMax",
+      "field": "architecture",
+      "pass1": "layered",
+      "pass2": "unknown",
+      "final_value": "layered",
+      "basis": "Official site and full manual describe features and a .NET/Windows implementation but never characterize the overall software architecture, so there is no official evidence to overturn pass1; 'unknown' is not a permitted enum value, so pass1 is retained.",
+      "decision": "uphold_pass1",
+      "source_url": "https://prepomax.fs.um.si/wp-content/uploads/2026/03/PrePoMax-v2.5.0-manual.pdf",
+      "confidence": "low"
+    },
+    {
+      "tool_name": "PrePoMax",
+      "field": "workflow_guide",
+      "pass1": false,
+      "pass2": true,
+      "final_value": true,
+      "decision": "adopt_pass2",
+      "basis": "The official PrePoMax manual documents 'Advisor - opens an interactive helper that will guide the user through the main steps to set up' a model, directly verifying workflow_guide=true.",
+      "source_url": "https://prepomax.fs.um.si/wp-content/uploads/2026/03/PrePoMax-v2.5.0-manual.pdf",
+      "confidence": "high"
+    },
+    {
+      "tool_name": "PrePoMax",
+      "field": "validation_years",
+      "pass1": 3,
+      "pass2": 10,
+      "final_value": 10,
+      "decision": "adopt_pass2",
+      "basis": "The official PrePoMax news archive records version 0.3.0 released 09/12/2016 as the earliest documented public release, giving 2026-2016=10 years.",
+      "source_url": "https://prepomax.fs.um.si/news/page/4/",
+      "confidence": "high"
+    }
+  ]
+}

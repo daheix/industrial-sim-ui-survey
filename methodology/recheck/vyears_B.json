@@ -1,0 +1,95 @@
+{
+  "years": [
+    {
+      "tool_name": "ANSYS Icepak",
+      "first_release_year": 1997,
+      "validation_years": 29,
+      "source_url": "https://www.symscape.com/blog/evolution-of-commercial-cfd.html",
+      "confidence": "approx"
+    },
+    {
+      "tool_name": "Keysight ADS",
+      "first_release_year": 1985,
+      "validation_years": 41,
+      "source_url": "https://en.wikipedia.org/wiki/Advanced_Design_System",
+      "confidence": "approx"
+    },
+    {
+      "tool_name": "Simcenter Flux",
+      "first_release_year": 1983,
+      "validation_years": 43,
+      "source_url": "https://2021.help.altair.com/2021/flux/flux/help/english/UserGuide/English/topics/CeQuonPeutModeliserAvecFlux2.htm",
+      "confidence": "approx"
+    },
+    {
+      "tool_name": "Lumerical",
+      "first_release_year": 2003,
+      "validation_years": 23,
+      "source_url": "https://optics.org/news/software-giant-ansys-to-acquire-photonic-simulation-specialist-lumerical",
+      "confidence": "approx"
+    },
+    {
+      "tool_name": "MATLAB/Simulink",
+      "first_release_year": 1984,
+      "validation_years": 42,
+      "source_url": "https://www.mathworks.com/company/technical-articles/a-brief-history-of-matlab.html",
+      "confidence": "exact"
+    },
+    {
+      "tool_name": "FreeCAD",
+      "first_release_year": 2002,
+      "validation_years": 24,
+      "source_url": "https://wiki.freecad.org/History",
+      "confidence": "exact"
+    },
+    {
+      "tool_name": "ANSYS AEDT",
+      "first_release_year": 1990,
+      "validation_years": 36,
+      "source_url": "https://ansys.synopsys.com/blog/go-big-with-hfss-exponential-hfss-innovation",
+      "confidence": "approx"
+    },
+    {
+      "tool_name": "LMS Virtual.Lab",
+      "first_release_year": 2002,
+      "validation_years": 24,
+      "source_url": "https://www.3ds.com/newsroom/press-releases/lms-first-company-join-dassault-systemes-new-simulia-partner-program",
+      "confidence": "exact"
+    },
+    {
+      "tool_name": "Siemens Xpedition+HyperLynx",
+      "first_release_year": 1988,
+      "validation_years": 38,
+      "source_url": "https://blogs.sw.siemens.com/electronic-systems-design/2013/01/31/hyperlynx9",
+      "confidence": "approx"
+    },
+    {
+      "tool_name": "Zemax OpticStudio",
+      "first_release_year": 1991,
+      "validation_years": 35,
+      "source_url": "https://www.ansys.com/news-center/press-releases/08-30-21-ansys-to-acquire-zemax-pursuant-to-definitive-acquisition-agreement",
+      "confidence": "approx"
+    },
+    {
+      "tool_name": "ANSYS Motor-CAD",
+      "first_release_year": 1999,
+      "validation_years": 27,
+      "source_url": "https://www.ansys.com/news-center/press-releases/10-08-19-ansys-strengthens-electric-machine-design-offerings-agreement-motor-design-ltd",
+      "confidence": "approx"
+    },
+    {
+      "tool_name": "ElmerGUI",
+      "first_release_year": 2008,
+      "validation_years": 18,
+      "source_url": "https://www.nic.funet.fi/pub/sci/physics/elmer/slides/ElmerIntro.pdf",
+      "confidence": "approx"
+    },
+    {
+      "tool_name": "COMSOL",
+      "first_release_year": 1998,
+      "validation_years": 28,
+      "source_url": "https://www.comsol.com/company",
+      "confidence": "exact"
+    }
+  ]
+}

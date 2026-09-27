@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this dataset, please cite it as below."
 type: dataset
 title: "Industrial Simulation UI & Extension Architecture Survey (46 tools × 15 fields)"
-version: 1.0.0
+version: 1.1.0
 date-released: 2026-09-27
 authors:
   - family-names: Wu

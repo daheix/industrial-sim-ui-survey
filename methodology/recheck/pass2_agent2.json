@@ -1,0 +1,61 @@
+{
+  "pass": 2,
+  "blind": true,
+  "extractor": "agent2",
+  "tools": [
+    {
+      "tool_name": "JMAG",
+      "category": "commercial",
+      "industry": "motor_em",
+      "ui_technology": "unknown",
+      "ui_pattern": "unknown",
+      "architecture": "layered",
+      "plugin_mechanism": "custom",
+      "scripting": "python",
+      "coupling": "single_kernel",
+      "workflow_guide": true,
+      "template_support": true,
+      "cloud_support": true,
+      "ai_ml": true,
+      "validation_years": 43,
+      "source_url": "https://www.jmag-international.com/products/",
+      "evidence_notes": "Official JSOL JMAG site. Products page: 'Since being released in 1983, JMAG has been used in industries and universities world-wide' -> 2026-1983=43 years; commercial product (free trial offered). Customization page (https://www.jmag-international.com/products/jmag-designer/customization/): 'VBScript, Python, or Jscript can be used for scripts' (Python chosen as primary; Python is also the basis of the AI/headless workflow) + user subroutines + geometry library and templates -> plugin_mechanism=custom, template_support=true. Multiphysics page (https://www.jmag-international.com/products/jmag-designer/multiphysics/): 'Multiple disciplines are closely integrated in JMAG', magnetic-thermal 'strong coupling', coupled analysis since 1994 -> coupling=single_kernel (external Open Interface file exchange and JMAG-RT reduced-order models also documented as secondary paths). AI page (https://www.jmag-international.com/features/artificial_intelligence/, 2026): AI agents operate JMAG, AI-driven script generation, full headless operation -> ai_ml=true. JMAG-Express Online (https://www.jmag-international.com/express/): free browser-based motor design tool, 'No installation required', geometry templates for PMSM/IM/SRM etc., guided 'Design a Motor in 5 Minutes' flow -> cloud_support=true, workflow_guide=true. GUI framework and overall UI pattern are not disclosed on official public pages -> ui_technology/ui_pattern=unknown."
+    },
+    {
+      "tool_name": "MSC Nastran",
+      "category": "commercial",
+      "industry": "structure_fea",
+      "ui_technology": "unknown",
+      "ui_pattern": "unknown",
+      "architecture": "monolithic",
+      "plugin_mechanism": "custom",
+      "scripting": "command_file",
+      "coupling": "co_simulation",
+      "workflow_guide": false,
+      "template_support": false,
+      "cloud_support": true,
+      "ai_ml": false,
+      "validation_years": 55,
+      "source_url": "https://www.cadence.com/en_US/home/tools/msc-software/msc-nastran.html",
+      "evidence_notes": "Cadence is the current official vendor (completed acquisition of Hexagon's Design & Engineering business, home of MSC Software). Product page: 'Analyze structural, thermal, and dynamic simulations' trusted in aerospace/automotive -> industry=structure_fea; 'Solve structural, thermal, dynamic, and nonlinear problems within a single integrated solver platform' -> architecture=monolithic; overview bullet 'Co-simulate across multiple disciplines' -> coupling=co_simulation (note: the 'single integrated solver' wording could also support single_kernel; the explicit coupling-strategy phrase documented is co-simulation). Official MSC Software blog (https://simulatemore.mscsoftware.com/msc-software-to-celebrate-50-years-of-simulation-innovation-at-2013-user-conference/): 'MSC released a commercial version of NASTRAN, MSC Nastran, in 1971' -> 2026-1971=55 years. Official docs: MSC Nastran User Defined Services User's Guide (https://documentation-be.hexagon.com/bundle/MSC_Nastran_2021.1_User_Defined_Services_User_Guide/raw/resource/enus/MSC_Nastran_2021.1_User_Defined_Services_User_Guide.pdf) 'a mechanism to utilize your own user subroutines or applications within an MSC Nastran execution' + DMAP -> plugin_mechanism=custom; solver is driven by text input decks (Case Control/Bulk Data) and DMAP command language -> scripting=command_file (no Python/TCL documented for Nastran itself). Hexagon official AWS Deployment Guide lists MSC Nastran (https://nexus.hexagon.com/documentationcenter/en-US/bundle/AWS_deployment_guide/page/Marc.html) -> cloud_support=true. Solver product with no own GUI (Patran/Apex are separate products); no guided-workflow, simulation-template, or AI/ML features documented for MSC Nastran itself -> ui_technology/ui_pattern=unknown, workflow_guide/template_support/ai_ml=false."
+    },
+    {
+      "tool_name": "PrePoMax",
+      "category": "open_source",
+      "industry": "structure_fea",
+      "ui_technology": "custom",
+      "ui_pattern": "tree_based",
+      "architecture": "unknown",
+      "plugin_mechanism": "none",
+      "scripting": "none",
+      "coupling": "file_exchange",
+      "workflow_guide": true,
+      "template_support": false,
+      "cloud_support": false,
+      "ai_ml": false,
+      "validation_years": 10,
+      "source_url": "https://prepomax.fs.um.si/",
+      "evidence_notes": "Official site: 'PrePoMax is an open-source pre and post-processor for the Calculix FEM solver'; downloads page (https://prepomax.fs.um.si/downloads/): GPLv3 free software, source code on GitLab (https://gitlab.com/MatejB/PrePoMax) -> category=open_source; 'based on the Microsoft .NET Framework 4.8', Windows .exe desktop app (manual: 'designed for Windows') -> ui_technology=custom (.NET/Windows stack; not Qt/WPF/Electron/Java/Python per official docs). Manual v2.6.0 (https://prepomax.fs.um.si/wp-content/uploads/2026/09/PrePoMax-v2.6.0-manual.pdf): 'three tabs of the model tree dictate the workflow in this software' -> ui_pattern=tree_based; 'Advisor - opens an interactive helper that will guide the user through the main steps to set up' -> workflow_guide=true (beginners advisor first added in v0.8.0 release notes); no scripting/macro language documented anywhere in the full manual (only a -r CLI regeneration flag) -> scripting=none; no plugin/extension mechanism documented -> none; bundles external executables (CalculiX solver, NetGen/Gmsh meshers) and prepares CalculiX/Abaqus input decks and reads result files -> coupling=file_exchange; overall software architecture not officially described -> unknown. First public release v0.3.0 dated 09/12/2016 (official news archive page 4) -> 2026-2016=10 years. Simulation templates, cloud deployment, and AI/ML not documented -> false."
+    }
+  ]
+}

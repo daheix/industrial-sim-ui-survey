@@ -1,0 +1,159 @@
+{
+  "adjudicator": "C",
+  "decisions": [
+    {
+      "tool_name": "Simcenter FloTHERM",
+      "field": "architecture",
+      "pass1": "layered",
+      "pass2": "monolithic",
+      "final_value": "layered",
+      "decision": "uphold_pass1",
+      "basis": "No official Siemens documentation characterizes FloTHERM's software architecture; the product page only describes workflow integration (pre/solve/post in one product), which does not rule out a layered internal design, so pass1 is upheld absent clear official evidence.",
+      "source_url": "https://www.siemens.com/en-us/products/simcenter/fluids-thermal-simulation/flotherm/",
+      "confidence": "low"
+    },
+    {
+      "tool_name": "Simcenter FloTHERM",
+      "field": "coupling",
+      "pass1": "rom",
+      "pass2": "single_kernel",
+      "final_value": "single_kernel",
+      "decision": "adopt_pass2",
+      "basis": "Official product page documents BCI-ROM as reduced-order models extracted from FloTHERM and exported to external tools (MATLAB/Simulink, VHDL-AMS, FMU), i.e. an export capability, while the airflow/heat-transfer physics are solved natively in one tailored electronics-cooling CFD solver kernel.",
+      "source_url": "https://www.siemens.com/en-us/products/simcenter/fluids-thermal-simulation/flotherm/",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Simcenter FloTHERM",
+      "field": "workflow_guide",
+      "pass1": false,
+      "pass2": true,
+      "final_value": true,
+      "decision": "adopt_pass2",
+      "basis": "Official Siemens training course 'Simcenter Flotherm Introduction' has users operate the Command Center guided environment (parametric studies, DOE and optimization) and the product page documents automatic model calibration, confirming a guided workflow.",
+      "source_url": "https://training.plm.automation.siemens.com/ilt/iltdescription.cfm?pID=ILT022002_____FTM__2404.0_B1105_en_US",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Simcenter FloTHERM",
+      "field": "cloud_support",
+      "pass1": false,
+      "pass2": true,
+      "final_value": true,
+      "decision": "adopt_pass2",
+      "basis": "Official Simcenter blog documents Simcenter Cloud HPC for running Simcenter CFD simulations on AWS and Siemens offers FloTHERM via cloud evaluation/Simcenter Cloud HPC, so cloud deployment is officially supported.",
+      "source_url": "https://blogs.sw.siemens.com/simcenter/the-future-of-cfd/",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Simcenter FloTHERM",
+      "field": "validation_years",
+      "pass1": 34,
+      "pass2": 37,
+      "final_value": 37,
+      "decision": "adopt_pass2",
+      "basis": "Official Siemens blog states Flomerics launched FloTHERM in 1989 ('In 1989 Flomerics was the first organisation to provide application specific CFD based simulation software'), and 2026-1989=37 (the product page's 'more than 34 years' statement dates from ~2023, consistent with the 1989 launch).",
+      "source_url": "https://blogs.sw.siemens.com/simulating-the-real-world/2012/04/17/more-than-two-decades-and-still-going-strong-flotherm-and-flovent-v9-3-now-released/",
+      "confidence": "high"
+    },
+    {
+      "tool_name": "Simcenter STAR-CCM+",
+      "field": "ui_technology",
+      "pass1": "custom",
+      "pass2": "java",
+      "final_value": "java",
+      "decision": "adopt_pass2",
+      "basis": "Official STAR-CCM+ Installation Guide requires/installs a Java (JDK) runtime for the client and official batch automation runs Java macro files ('-batch <macro>.java'), evidencing a Java-based client/UI stack.",
+      "source_url": "https://d29zixkvogvpln.cloudfront.net/11.06a/InstallationGuide_11.06.010_02_en.html",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Simcenter STAR-CCM+",
+      "field": "ui_pattern",
+      "pass1": "tree_based",
+      "pass2": "workbench",
+      "final_value": "workbench",
+      "decision": "adopt_pass2",
+      "basis": "Official product page characterizes STAR-CCM+ as a 'single, unified CFD tool' whose 'single fully integrated user interface' spans pre-processing, meshing, solving, analysis and post-processing, matching the workbench (integrated project environment) pattern.",
+      "source_url": "https://www.siemens.com/en-us/products/simcenter/fluids-thermal-simulation/star-ccm/",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Simcenter STAR-CCM+",
+      "field": "validation_years",
+      "pass1": 20,
+      "pass2": 22,
+      "final_value": 22,
+      "decision": "adopt_pass2",
+      "basis": "Official Siemens blog documents STAR-CCM+ V1.02 already in use in 2005 and '15 years' of usage in 2020, and the vendor's CD-adapco catalog states first release in 2004, so 2026-2004=22.",
+      "source_url": "https://blogs.sw.siemens.com/simcenter/15-years-of-using-simcenter-star-ccm/",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Simpack",
+      "field": "industry",
+      "pass1": "manufacturing",
+      "pass2": "structure_fea",
+      "final_value": "structure_fea",
+      "decision": "adopt_pass2",
+      "basis": "Official 3ds.com page defines SIMULIA Simpack as a 'general purpose multibody simulation (MBS) software' for dynamic analysis of mechanical and mechatronic systems, i.e. structural/system dynamics, making structure_fea the closest form enum (manufacturing in this taxonomy denotes forming/CAM-type tools).",
+      "source_url": "https://www.3ds.com/products/simulia/simpack/",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Simpack",
+      "field": "ui_pattern",
+      "pass1": "workbench",
+      "pass2": "multi_tool",
+      "final_value": "multi_tool",
+      "decision": "adopt_pass2",
+      "basis": "Official 3ds.com page documents that Simpack is packaged as a set of separate cooperating tools - 'Simpack Pre, Simpack Solver, Simpack Post, and Simpack Wizard' - extended by add-on modules, matching the multi_tool pattern rather than a single integrated workbench.",
+      "source_url": "https://www.3ds.com/products/simulia/simpack/",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Simpack",
+      "field": "architecture",
+      "pass1": "layered",
+      "pass2": "plugin_based",
+      "final_value": "plugin_based",
+      "decision": "adopt_pass2",
+      "basis": "Official 3ds.com page states Simpack's core set of modules 'can be extended with additional general or industry-specific add-ons' (Automotive, Rail, Engine, Drivetrain, Wind, Realtime modules, etc.), an officially documented core-plus-extension (plugin_based) architecture.",
+      "source_url": "https://www.3ds.com/products/simulia/simpack/",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Simpack",
+      "field": "scripting",
+      "pass1": "command_file",
+      "pass2": "javascript",
+      "final_value": "javascript",
+      "decision": "adopt_pass2",
+      "basis": "Official Dassault SIMULIA community documentation shows Simpack automation scripts are JavaScript ('Simpack Javascript code', .sjs files, Node.js-based debugging) and the official 3DS training catalog lists a SIMPACK SCRIPTING course for Pre/Post automation; 'javascript' is the documented extension value allowed for this field.",
+      "source_url": "https://3dswym.3dexperience.3ds.com/post/simulia-community/simpack-scripting-debugging-in-vs-code_-MZBmGd2QNqW_9tyTGvQAQ",
+      "confidence": "high"
+    },
+    {
+      "tool_name": "Simpack",
+      "field": "cloud_support",
+      "pass1": false,
+      "pass2": null,
+      "final_value": true,
+      "decision": "new_value",
+      "basis": "Official Dassault Systèmes event page 'Simulating Smarter with Cloud-Based Multibody Dynamics' documents multibody simulation via the 3DEXPERIENCE Cloud platform and the Simpack page documents its integration with 3DEXPERIENCE roles, so cloud deployment is supported (pass2's null is not an allowed bool value).",
+      "source_url": "https://events.3ds.com/simulia-cloud-based-multibody-dynamics",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Simpack",
+      "field": "validation_years",
+      "pass1": 20,
+      "pass2": 33,
+      "final_value": 33,
+      "decision": "adopt_pass2",
+      "basis": "Official Dassault Systèmes webinar document (wind turbine dynamics) gives Simpack's history as '1993 First commercial rail manufactures purchase Simpack', so first documented commercial release 1993 gives 2026-1993=33.",
+      "source_url": "https://events.3ds.com/sites/default/files/wind-turbine-dynamics.pdf",
+      "confidence": "medium"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "years": [
+    {
+      "tool_name": "CalculiX CAE",
+      "first_release_year": 1998,
+      "validation_years": 28,
+      "source_url": "https://www.calculix.de/",
+      "confidence": "exact",
+      "basis": "Official CalculiX site (Dhondt & Wittig) documents the program from 1998 ('1998 Guido Dhondt and Klaus Wittig'); 2026-1998=28."
+    },
+    {
+      "tool_name": "Qt QUiLoader",
+      "first_release_year": 2007,
+      "validation_years": 19,
+      "source_url": "https://doc.qt.io/archives/qt-4.8/quiloader.html",
+      "confidence": "approx",
+      "basis": "Component value: QUiLoader (QtUiTools) is officially documented in the Qt archives, with members introduced in Qt 4.5, and its introduction is commonly dated to Qt 4.3 (2007); the exact introduction version is inferred, hence approx."
+    },
+    {
+      "tool_name": "HFSS 3D Layout",
+      "first_release_year": 2012,
+      "validation_years": 14,
+      "source_url": "https://ansys.synopsys.com/products/electronics/ansys-hfss",
+      "confidence": "approx",
+      "basis": "Official Ansys (ansys.synopsys.com) documents HFSS 3D Layout as a product but does not state a first-release year; industry press (CIMdata, Nov 2012, reproducing Ansys announcements) shows the product shipping by late 2012, so 2012 is approximate; 2026-2012=14."
+    },
+    {
+      "tool_name": "Cadence Allegro X",
+      "first_release_year": 2022,
+      "validation_years": 4,
+      "source_url": "https://newsroom.cadence.com/press-releases/default.aspx",
+      "confidence": "exact",
+      "basis": "Official Cadence newsroom lists 'New Cadence Allegro X Design Platform Revolutionizes System Design' dated 06/08/2022 as the product launch; 2026-2022=4."
+    },
+    {
+      "tool_name": "LTspice",
+      "first_release_year": 1999,
+      "validation_years": 27,
+      "source_url": "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
+      "confidence": "approx",
+      "basis": "Official vendor (Analog Devices) product page does not state a release year; the first public release (LTspice/SwitcherCAD III, 1999) is consistently documented by independent historical sources, hence approx; 2026-1999=27."
+    },
+    {
+      "tool_name": "AutoForm",
+      "first_release_year": 1995,
+      "validation_years": 31,
+      "source_url": "https://www.autoform.com/",
+      "confidence": "exact",
+      "basis": "Official AutoForm site footer documents 'Copyright (c) 1995-2026 AutoForm Engineering GmbH' and the company is documented as founded in 1995 (ETH Zurich spin-off); 2026-1995=31."
+    },
+    {
+      "tool_name": "KiCad",
+      "first_release_year": 1992,
+      "validation_years": 34,
+      "source_url": "https://www.kicad.org/about/kicad/",
+      "confidence": "exact",
+      "basis": "Official KiCad website states 'KiCad was first released in 1992 by its original author, Jean-Pierre Charras'; 2026-1992=34."
+    },
+    {
+      "tool_name": "CST Studio Suite",
+      "first_release_year": 2006,
+      "validation_years": 20,
+      "source_url": "https://www.3ds.com/products/simulia/cst-studio-suite",
+      "confidence": "exact",
+      "basis": "Official Dassault page states CST Microwave Studio was the first product of the CST Studio line and that in 2006 CST Microwave Studio and the other CST software were integrated into CST Studio Suite, so the suite's first documented release is 2006; 2026-2006=20."
+    },
+    {
+      "tool_name": "Synopsys",
+      "first_release_year": 1986,
+      "validation_years": 40,
+      "source_url": "https://www.synopsys.com/company/acquisitions.html",
+      "confidence": "exact",
+      "basis": "Official Synopsys page states 'Founded as a synthesis company in 1986' (Design Platform origin year); 2026-1986=40."
+    },
+    {
+      "tool_name": "DEFORM",
+      "first_release_year": 1989,
+      "validation_years": 37,
+      "source_url": "https://www.deform.com/general/",
+      "confidence": "exact",
+      "basis": "Official SFTC history page states 'DEFORM was first released in its 2D workstation version in 1989' (DEFORM-3D followed in 1993); 2026-1989=37."
+    },
+    {
+      "tool_name": "ANSYS Workbench",
+      "first_release_year": 2000,
+      "validation_years": 26,
+      "source_url": "https://install.simutechgroup.com/info-ansys-versions-release-dates",
+      "confidence": "approx",
+      "basis": "The Workbench environment debuted with ANSYS 5.7, whose release the Ansys channel-partner version history dates to 2000 (Ansys itself documents prior releases only on its platform-support page); the Workbench-5.7 (2000) association is inferred from release-history documentation, hence approx; 2026-2000=26."
+    }
+  ]
+}

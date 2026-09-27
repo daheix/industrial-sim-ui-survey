@@ -1,0 +1,469 @@
+{
+  "adjudicated_cells": 35,
+  "years_updated": 36,
+  "changes": [
+    {
+      "tool": "ANSYS Twin Builder",
+      "field": "industry",
+      "old": "power_circuit",
+      "new": "multiphysics",
+      "confidence": "medium"
+    },
+    {
+      "tool": "ANSYS Twin Builder",
+      "field": "ui_pattern",
+      "old": "ribbon",
+      "new": "schematic",
+      "confidence": "medium"
+    },
+    {
+      "tool": "ANSYS Twin Builder",
+      "field": "validation_years",
+      "old": 10,
+      "new": 8,
+      "confidence": "high"
+    },
+    {
+      "tool": "Altair HyperWorks",
+      "field": "ui_pattern",
+      "old": "tree_based",
+      "new": "ribbon",
+      "confidence": "high"
+    },
+    {
+      "tool": "Altair HyperWorks",
+      "field": "coupling",
+      "old": "orchestration",
+      "new": "file_exchange",
+      "confidence": "medium"
+    },
+    {
+      "tool": "Altair HyperWorks",
+      "field": "workflow_guide",
+      "old": false,
+      "new": true,
+      "confidence": "medium"
+    },
+    {
+      "tool": "Altair HyperWorks",
+      "field": "validation_years",
+      "old": 30,
+      "new": 36,
+      "confidence": "high"
+    },
+    {
+      "tool": "Altium Designer",
+      "field": "ui_pattern",
+      "old": "hybrid",
+      "new": "panel_system",
+      "confidence": "medium"
+    },
+    {
+      "tool": "Altium Designer",
+      "field": "architecture",
+      "old": "layered",
+      "new": "plugin_based",
+      "confidence": "high"
+    },
+    {
+      "tool": "Altium Designer",
+      "field": "scripting",
+      "old": "python",
+      "new": "delphi",
+      "confidence": "high"
+    },
+    {
+      "tool": "Altium Designer",
+      "field": "coupling",
+      "old": "file_exchange",
+      "new": "single_kernel",
+      "confidence": "medium"
+    },
+    {
+      "tool": "Altium Designer",
+      "field": "template_support",
+      "old": false,
+      "new": true,
+      "confidence": "high"
+    },
+    {
+      "tool": "Altium Designer",
+      "field": "ai_ml",
+      "old": false,
+      "new": true,
+      "confidence": "medium"
+    },
+    {
+      "tool": "Altium Designer",
+      "field": "validation_years",
+      "old": 20,
+      "new": 41,
+      "confidence": "medium"
+    },
+    {
+      "tool": "JMAG",
+      "field": "coupling",
+      "old": "file_exchange",
+      "new": "single_kernel",
+      "confidence": "high"
+    },
+    {
+      "tool": "JMAG",
+      "field": "cloud_support",
+      "old": false,
+      "new": true,
+      "confidence": "medium"
+    },
+    {
+      "tool": "JMAG",
+      "field": "validation_years",
+      "old": 30,
+      "new": 43,
+      "confidence": "high"
+    },
+    {
+      "tool": "MSC Nastran",
+      "field": "coupling",
+      "old": "file_exchange",
+      "new": "co_simulation",
+      "confidence": "high"
+    },
+    {
+      "tool": "MSC Nastran",
+      "field": "validation_years",
+      "old": 40,
+      "new": 55,
+      "confidence": "high"
+    },
+    {
+      "tool": "PrePoMax",
+      "field": "industry",
+      "old": "open_cae",
+      "new": "structure_fea",
+      "confidence": "high"
+    },
+    {
+      "tool": "PrePoMax",
+      "field": "workflow_guide",
+      "old": false,
+      "new": true,
+      "confidence": "high"
+    },
+    {
+      "tool": "PrePoMax",
+      "field": "validation_years",
+      "old": 3,
+      "new": 10,
+      "confidence": "high"
+    },
+    {
+      "tool": "Simcenter FloTHERM",
+      "field": "coupling",
+      "old": "rom",
+      "new": "single_kernel",
+      "confidence": "medium"
+    },
+    {
+      "tool": "Simcenter FloTHERM",
+      "field": "workflow_guide",
+      "old": false,
+      "new": true,
+      "confidence": "medium"
+    },
+    {
+      "tool": "Simcenter FloTHERM",
+      "field": "cloud_support",
+      "old": false,
+      "new": true,
+      "confidence": "medium"
+    },
+    {
+      "tool": "Simcenter FloTHERM",
+      "field": "validation_years",
+      "old": 34,
+      "new": 37,
+      "confidence": "high"
+    },
+    {
+      "tool": "Simcenter STAR-CCM+",
+      "field": "ui_technology",
+      "old": "custom",
+      "new": "java",
+      "confidence": "medium"
+    },
+    {
+      "tool": "Simcenter STAR-CCM+",
+      "field": "ui_pattern",
+      "old": "tree_based",
+      "new": "workbench",
+      "confidence": "medium"
+    },
+    {
+      "tool": "Simcenter STAR-CCM+",
+      "field": "validation_years",
+      "old": 20,
+      "new": 22,
+      "confidence": "medium"
+    },
+    {
+      "tool": "Simpack",
+      "field": "industry",
+      "old": "manufacturing",
+      "new": "structure_fea",
+      "confidence": "medium"
+    },
+    {
+      "tool": "Simpack",
+      "field": "ui_pattern",
+      "old": "workbench",
+      "new": "multi_tool",
+      "confidence": "medium"
+    },
+    {
+      "tool": "Simpack",
+      "field": "architecture",
+      "old": "layered",
+      "new": "plugin_based",
+      "confidence": "medium"
+    },
+    {
+      "tool": "Simpack",
+      "field": "scripting",
+      "old": "command_file",
+      "new": "javascript",
+      "confidence": "high"
+    },
+    {
+      "tool": "Simpack",
+      "field": "cloud_support",
+      "old": false,
+      "new": true,
+      "confidence": "medium"
+    },
+    {
+      "tool": "Simpack",
+      "field": "validation_years",
+      "old": 20,
+      "new": 33,
+      "confidence": "medium"
+    }
+  ],
+  "years_changes": [
+    {
+      "tool": "PSCAD",
+      "old": 40,
+      "new": 33,
+      "confidence": "exact"
+    },
+    {
+      "tool": "3DEXPERIENCE SIMULIA",
+      "old": 15,
+      "new": 14,
+      "confidence": "exact"
+    },
+    {
+      "tool": "Silvaco TCAD",
+      "old": 30,
+      "new": 42,
+      "confidence": "approx"
+    },
+    {
+      "tool": "nedrysoft/componentSystem",
+      "old": 3,
+      "new": 6,
+      "confidence": "exact"
+    },
+    {
+      "tool": "Zuken CR-8000",
+      "old": 30,
+      "new": 15,
+      "confidence": "exact"
+    },
+    {
+      "tool": "MSC ADAMS",
+      "old": 30,
+      "new": 49,
+      "confidence": "approx"
+    },
+    {
+      "tool": "Qt QPluginLoader",
+      "old": 15,
+      "new": 25,
+      "confidence": "approx"
+    },
+    {
+      "tool": "Actran",
+      "old": 15,
+      "new": 24,
+      "confidence": "approx"
+    },
+    {
+      "tool": "LS-DYNA",
+      "old": 40,
+      "new": 37,
+      "confidence": "approx"
+    },
+    {
+      "tool": "SALOME",
+      "old": 20,
+      "new": 26,
+      "confidence": "exact"
+    },
+    {
+      "tool": "Synopsys TCAD",
+      "old": 30,
+      "new": 33,
+      "confidence": "exact"
+    },
+    {
+      "tool": "Abaqus",
+      "old": 30,
+      "new": 48,
+      "confidence": "exact"
+    },
+    {
+      "tool": "Cadence Celsius Studio",
+      "old": 20,
+      "new": 7,
+      "confidence": "exact"
+    },
+    {
+      "tool": "ANSYS Icepak",
+      "old": 20,
+      "new": 29,
+      "confidence": "approx"
+    },
+    {
+      "tool": "Keysight ADS",
+      "old": 20,
+      "new": 41,
+      "confidence": "approx"
+    },
+    {
+      "tool": "Simcenter Flux",
+      "old": 30,
+      "new": 43,
+      "confidence": "approx"
+    },
+    {
+      "tool": "Lumerical",
+      "old": 15,
+      "new": 23,
+      "confidence": "approx"
+    },
+    {
+      "tool": "MATLAB/Simulink",
+      "old": 40,
+      "new": 42,
+      "confidence": "exact"
+    },
+    {
+      "tool": "FreeCAD",
+      "old": 20,
+      "new": 24,
+      "confidence": "exact"
+    },
+    {
+      "tool": "ANSYS AEDT",
+      "old": 20,
+      "new": 36,
+      "confidence": "approx"
+    },
+    {
+      "tool": "LMS Virtual.Lab",
+      "old": 20,
+      "new": 24,
+      "confidence": "exact"
+    },
+    {
+      "tool": "Siemens Xpedition+HyperLynx",
+      "old": 30,
+      "new": 38,
+      "confidence": "approx"
+    },
+    {
+      "tool": "Zemax OpticStudio",
+      "old": 20,
+      "new": 35,
+      "confidence": "approx"
+    },
+    {
+      "tool": "ANSYS Motor-CAD",
+      "old": 15,
+      "new": 27,
+      "confidence": "approx"
+    },
+    {
+      "tool": "ElmerGUI",
+      "old": 15,
+      "new": 18,
+      "confidence": "approx"
+    },
+    {
+      "tool": "COMSOL",
+      "old": 15,
+      "new": 28,
+      "confidence": "exact"
+    },
+    {
+      "tool": "CalculiX CAE",
+      "old": 5,
+      "new": 28,
+      "confidence": "exact"
+    },
+    {
+      "tool": "Qt QUiLoader",
+      "old": 15,
+      "new": 19,
+      "confidence": "approx"
+    },
+    {
+      "tool": "HFSS 3D Layout",
+      "old": 15,
+      "new": 14,
+      "confidence": "approx"
+    },
+    {
+      "tool": "Cadence Allegro X",
+      "old": 30,
+      "new": 4,
+      "confidence": "exact"
+    },
+    {
+      "tool": "LTspice",
+      "old": 25,
+      "new": 27,
+      "confidence": "approx"
+    },
+    {
+      "tool": "AutoForm",
+      "old": 25,
+      "new": 31,
+      "confidence": "exact"
+    },
+    {
+      "tool": "KiCad",
+      "old": 30,
+      "new": 34,
+      "confidence": "exact"
+    },
+    {
+      "tool": "Synopsys",
+      "old": 30,
+      "new": 40,
+      "confidence": "exact"
+    },
+    {
+      "tool": "DEFORM",
+      "old": 20,
+      "new": 37,
+      "confidence": "exact"
+    },
+    {
+      "tool": "ANSYS Workbench",
+      "old": 20,
+      "new": 26,
+      "confidence": "approx"
+    }
+  ]
+}

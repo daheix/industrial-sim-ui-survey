@@ -1,0 +1,61 @@
+{
+  "pass": 2,
+  "blind": true,
+  "extractor": "agent1",
+  "tools": [
+    {
+      "tool_name": "ANSYS Twin Builder",
+      "category": "commercial",
+      "industry": "multiphysics",
+      "ui_technology": "unknown",
+      "ui_pattern": "schematic",
+      "architecture": "plugin_based",
+      "plugin_mechanism": "custom",
+      "scripting": "python",
+      "coupling": "rom",
+      "workflow_guide": true,
+      "template_support": true,
+      "cloud_support": true,
+      "ai_ml": true,
+      "validation_years": 8,
+      "source_url": "https://www.ansys.com/products/digital-twin/ansys-twin-builder",
+      "evidence_notes": "Official product page (ansys.com, fetched 2026-09): 'Multidomain Systems Modeler... Create hierarchical schematics of complex power electronic circuits and multidomain systems' -> ui_pattern=schematic; ROMs from Ansys 3D physics solvers are the flagship coupling capability ('ROM ribbon and gallery') -> coupling=rom; Twin Deployer deploys twins 'using cloud, edge or offline computing resources' -> cloud=true; 2026 R1 What's New: ML methods (Temporal Fusion Transformer, Neural ODE), Ansys Engineering Copilot in Twin Builder, new guided 'ROM Wizard' in TwinAI, Battery Wizard -> ai_ml=true, workflow_guide=true. Official Twin Builder Scripting Guide (ansyshelp.ansys.com): 'Ansys Twin Builder can record scripts in IronPython. Additionally, it contains an IronPython command shell' -> scripting=python; scripts run in the Ansys Electronics Desktop shell. Official datasheet: 'Build custom toolkits with Twin Builder's comprehensive Python application programming interface (API)'; official Twin Builder Help directs users to device-model libraries via the Ansys ACT Application Store -> extension mechanism is Ansys-proprietary (ACT/toolkits) -> plugin_mechanism=custom, architecture=plugin_based (closest documented enum; overall architecture otherwise not officially characterized). template_support=true: Modelica library 'includes several templates for equivalent circuit models (ECM)' (official datasheet) and custom report templates (official Twin Builder Help 2025 R2). validation_years=8: Twin Builder first delivered in Ansys 19.1 per official press release 'Ansys 19.1 Delivers the First Comprehensive Solution...' (May 2018); 2018->2026. (Simplorer solver heritage is older, but the tool as named launched 2018.) ui_technology=unknown: vendor does not officially document the UI framework of Twin Builder / Ansys Electronics Desktop."
+    },
+    {
+      "tool_name": "Altair HyperWorks",
+      "category": "commercial",
+      "industry": "structure_fea",
+      "ui_technology": "custom",
+      "ui_pattern": "ribbon",
+      "architecture": "plugin_based",
+      "plugin_mechanism": "custom",
+      "scripting": "tcl",
+      "coupling": "file_exchange",
+      "workflow_guide": true,
+      "template_support": true,
+      "cloud_support": true,
+      "ai_ml": true,
+      "validation_years": 36,
+      "source_url": "https://2022.help.altair.com/2022/hwdesktop/hwx/topics/chapter_heads/workspace_r.htm",
+      "evidence_notes": "Official HyperWorks help (2022.help.altair.com / help.altair.com, HyperWorks 2022/2026): 'Ribbons - The ribbon allows you to quickly access tools and standard functions, and is located along the top of HyperWorks' -> ui_pattern=ribbon; 'Guide Bars - guide you through a series of commands, required inputs, and options necessary to complete a workflow' -> workflow_guide=true; 'Tcl Console enables you to enter and execute Tcl/Tk commands' and aerospace utilities 'developed using HyperWorks-Tcl' -> scripting=tcl (Python APIs also exist in newer releases); title bar shows 'active product and user profile' with products/user profiles loaded into a shared UI framework (Altair 'Unity' framework) -> architecture=plugin_based, plugin_mechanism=custom. 'A solver interface is made up of a template and a FE-input reader' plus 'Sessions and Report Templates' -> template_support=true (note: these are solver-interface/report templates, not full simulation-setup templates). PhysicsAI official help: 'Use PhysicsAI to build fast predictive models from CAE data' and official HyperWorks 2025 press release (PRNewswire, Feb 2025): transformer physics-prediction models, ML as solvers, AI-enabled ROM -> ai_ml=true; same release: 'scalable cloud collaboration', Altair One cloud gateway (official Siemens/Altair page) -> cloud=true. ui_technology=custom: Altair announced the HyperWorks UI is built on its proprietary 'Unity' UI framework (Altair CTO James Dagg, 2015); no official Qt/WPF/Java statement. coupling=file_exchange: multi-solver suite integrated via solver interfaces/FE-input readers; some documented co-simulation pairs (e.g., AcuSolve-MotionSolve) exist but file exchange via solver decks is the primary documented integration. industry=structure_fea as primary use (HyperMesh/OptiStruct/Radioss FEA core), though officially the platform now spans multiphysics. validation_years=36: official Altair Intellectual Property Rights Notice lists 'Altair HyperWorks (C)1990-2021' (earliest official date for the product); third-party histories commonly date the HyperWorks suite branding to 1999 with HyperMesh from 1990. Altair was acquired by Siemens (2025); per siemens.com, HyperWorks software is being integrated into the Simcenter portfolio but remains documented/released (HyperWorks 2026)."
+    },
+    {
+      "tool_name": "Altium Designer",
+      "category": "commercial",
+      "industry": "pcb_eda",
+      "ui_technology": "custom",
+      "ui_pattern": "panel_system",
+      "architecture": "plugin_based",
+      "plugin_mechanism": "custom",
+      "scripting": "unknown",
+      "coupling": "single_kernel",
+      "workflow_guide": null,
+      "template_support": true,
+      "cloud_support": true,
+      "ai_ml": null,
+      "validation_years": 41,
+      "source_url": "https://www.altium.com/altium-designer/",
+      "evidence_notes": "Official product page (altium.com, fetched 2026-09): 'Unified Design Environment and Data Model... all in one intuitive interface and unified data model' -> coupling=single_kernel; 'Powered by cloud-enabled synchronization' via Altium 365 -> cloud=true; 'Altium Designer has powered PCB design innovation for over 40 years' -> validation_years=41 (1985 Protel lineage per official vendor claim; note: the Altium Designer brand was launched in 2005 with AD 6.0 as successor of the Protel line per Wikipedia/official rebrand article, so a strict brand-only reading gives 21). Official documentation (altium.com/documentation): scripting primary language is DelphiScript ('closely related to Embarcadero Delphi'; VBScript/JavaScript legacy-only) -> does not fit the form enum, recorded as unknown rather than guessed. Official scripting docs: 'The scripting engine itself is written in Embarcadero Delphi, and the Tool Palette panel is based on the Delphi's VCL (Visual Component Library)' and script forms use Delphi .DFM files -> proprietary Delphi/VCL UI stack, not Qt/WPF/Java/Electron -> ui_technology=custom. Official script example reports on 'all installed servers' processes in Altium Designer' and official materials describe extensions/add-ons -> server/plugin-style platform -> architecture=plugin_based, plugin_mechanism=custom. UI is document editors (schematic/PCB/multi-board/harness/Draftsman) plus dockable panels (Projects panel, panels docs) -> ui_pattern=panel_system. template_support=true: schematic templates (.SchDot), Draftsman document templates, project templates officially documented ('Creating a Schematic Template', 'Creating a Project Template'). workflow_guide=null: no guided engineering workflow feature documented for the tool (the officially named 'Workflow Processes' feature is enterprise release/process management in Altium Agile, not an in-tool guided workflow; object wizards like IPC Footprint Wizard exist but are not guided simulation/design workflows). ai_ml=null: no AI/ML feature documented inside Altium Designer itself as of v26.x (What's New 25.x-26.x contains no AI features); AI exists in platform components (e.g., Requirements Portal Engineering Assistant) and Altium's AI/ML resource hub, but not documented within the design tool."
+    }
+  ]
+}

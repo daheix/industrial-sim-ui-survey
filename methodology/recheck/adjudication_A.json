@@ -1,0 +1,193 @@
+{
+  "adjudicator": "A",
+  "note": "Evidence-based adjudication (pass 3) of 17 disagreement cells. final_value values are enums from extraction_form.json, with the documented scripting extensions 'javascript'/'delphi' allowed.",
+  "decisions": [
+    {
+      "tool_name": "ANSYS Twin Builder",
+      "field": "industry",
+      "pass1": "power_circuit",
+      "pass2": "multiphysics",
+      "final_value": "multiphysics",
+      "decision": "adopt_pass2",
+      "basis": "Official product page defines Twin Builder as an 'integrated multidomain system simulation' with a 'Multidomain Systems Modeler' spanning power electronics, mechanical, hydraulic, thermal and electromagnetic domains, so multiphysics is better evidenced than the narrow power_circuit.",
+      "source_url": "https://www.ansys.com/products/digital-twin/ansys-twin-builder",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "ANSYS Twin Builder",
+      "field": "ui_technology",
+      "pass1": "custom",
+      "pass2": "unknown",
+      "final_value": "custom",
+      "decision": "uphold_pass1",
+      "basis": "No official Ansys documentation identifies the UI framework of Twin Builder / Ansys Electronics Desktop, and 'unknown' is not an allowed enum, so pass1's proprietary-desktop value 'custom' is retained.",
+      "source_url": "https://www.ansys.com/products/digital-twin/ansys-twin-builder",
+      "confidence": "low"
+    },
+    {
+      "tool_name": "ANSYS Twin Builder",
+      "field": "ui_pattern",
+      "pass1": "ribbon",
+      "pass2": "schematic",
+      "final_value": "schematic",
+      "basis": "Official product page repeatedly documents the primary modeling canvas as hierarchical schematics ('Create hierarchical schematics of complex power electronic circuits and multidomain systems'), while 'ROM ribbon and gallery' describes only a secondary feature-access control.",
+      "decision": "adopt_pass2",
+      "source_url": "https://www.ansys.com/products/digital-twin/ansys-twin-builder",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "ANSYS Twin Builder",
+      "field": "validation_years",
+      "pass1": 10,
+      "pass2": 8,
+      "final_value": 8,
+      "decision": "adopt_pass2",
+      "basis": "Official Ansys press release of 2018-05-15 states 'Ansys 19.1 delivers Ansys Twin Builder, a first-of-its-kind product', so first documented public release is 2018 and 2026-2018=8.",
+      "source_url": "https://www.ansys.com/news-center/press-releases/05-15-18-ansys-releases-19-1-update",
+      "confidence": "high"
+    },
+    {
+      "tool_name": "Altair HyperWorks",
+      "field": "industry",
+      "pass1": "multiphysics",
+      "pass2": "structure_fea",
+      "final_value": "multiphysics",
+      "decision": "uphold_pass1",
+      "basis": "Official Altair IP Rights Notice positions 'Altair HyperWorks, a Design & Simulation Platform' spanning structural (HyperMesh/OptiStruct), CFD (AcuSolve) and electromagnetic (Flux) solvers, so the platform-level multiphysics value is retained.",
+      "source_url": "https://help.altair.com/hwdesktop/hvp/intellectual_property_rights_notice_hyperworks_r.htm",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Altair HyperWorks",
+      "field": "ui_pattern",
+      "pass1": "tree_based",
+      "pass2": "ribbon",
+      "final_value": "ribbon",
+      "decision": "adopt_pass2",
+      "basis": "Official HyperWorks help documents the ribbon as the primary UI ('The ribbon allows you to quickly access tools and standard functions, and is located along the top of HyperWorks'; e.g. the 'Developer ribbon' in the 2024/2025 help).",
+      "source_url": "https://2025.help.altair.com/2025/hwdesktop/hwx/index.htm",
+      "confidence": "high"
+    },
+    {
+      "tool_name": "Altair HyperWorks",
+      "field": "coupling",
+      "pass1": "orchestration",
+      "pass2": "file_exchange",
+      "final_value": "file_exchange",
+      "basis": "Official help documents integration with external solvers via solver interfaces made of 'a template and a FE-input reader' (solver-deck file exchange) rather than an in-tool co-simulation kernel.",
+      "decision": "adopt_pass2",
+      "source_url": "https://2022.help.altair.com/2022/hwdesktop/hwx/index.htm",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Altair HyperWorks",
+      "field": "workflow_guide",
+      "pass1": false,
+      "pass2": true,
+      "final_value": true,
+      "decision": "adopt_pass2",
+      "basis": "Official HyperWorks help documents Guide Bars that 'guide you through a series of commands, required inputs, and options necessary to complete a workflow', evidencing a guided workflow.",
+      "source_url": "https://2022.help.altair.com/2022/hwdesktop/hwx/topics/chapter_heads/workspace_r.htm",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Altair HyperWorks",
+      "field": "validation_years",
+      "pass1": 30,
+      "pass2": 36,
+      "final_value": 36,
+      "decision": "adopt_pass2",
+      "basis": "Official Altair Intellectual Property Rights Notice lists 'Altair HyperWorks (c)1990-2025' and 'HyperMesh (c)1990-2024', giving a first documented release year of 1990 and 2026-1990=36.",
+      "source_url": "https://help.altair.com/hwdesktop/hvp/intellectual_property_rights_notice_hyperworks_r.htm",
+      "confidence": "high"
+    },
+    {
+      "tool_name": "Altium Designer",
+      "field": "ui_pattern",
+      "pass1": "hybrid",
+      "pass2": "panel_system",
+      "final_value": "panel_system",
+      "decision": "adopt_pass2",
+      "basis": "Official Altium developer documentation describes the UI as organized around panels ('IGUIManager deals with the User interface of Altium Designer, the locations and state of panels'; the 'document view / multiple panel views structure is the foundation of Altium Designer'), supporting panel_system over the generic hybrid.",
+      "source_url": "https://www.altium.com/documentation/altium-dxp-developer/system-api",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Altium Designer",
+      "field": "architecture",
+      "pass1": "layered",
+      "pass2": "plugin_based",
+      "final_value": "plugin_based",
+      "decision": "adopt_pass2",
+      "basis": "Official Altium SDK documentation states there is 'one Client executable and several servers as loaded dynamic library linked modules' and that SDK extensions 'are plug-in servers in the Altium Designer client-server architecture'.",
+      "source_url": "https://www.altium.com/documentation/altium-dxp-developer/an-overview-of-the-altium-sdk",
+      "confidence": "high"
+    },
+    {
+      "tool_name": "Altium Designer",
+      "field": "scripting",
+      "pass1": "python",
+      "pass2": "unknown",
+      "final_value": "delphi",
+      "decision": "new_value",
+      "basis": "Official scripting documentation states 'The default scripting language is set to DelphiScript' and 'the primary language and the most referred to in the Scripting documentation is DelphiScript' (VBScript/JavaScript are legacy-only), matching the documented 'delphi' extension of the enum; pass1's python has no official basis.",
+      "source_url": "https://www.altium.com/documentation/altium-designer/scripting/language-support",
+      "confidence": "high"
+    },
+    {
+      "tool_name": "Altium Designer",
+      "field": "coupling",
+      "pass1": "file_exchange",
+      "pass2": "single_kernel",
+      "final_value": "single_kernel",
+      "decision": "adopt_pass2",
+      "basis": "Official documentation states 'The unified nature of Altium Designer allows for seamless movement of design data from one design realm to the next' (unified design environment and data model across schematic, PCB and simulation), supporting single_kernel.",
+      "source_url": "https://www.altium.com/documentation/altium-designer",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Altium Designer",
+      "field": "workflow_guide",
+      "pass1": true,
+      "pass2": null,
+      "final_value": true,
+      "decision": "uphold_pass1",
+      "basis": "Pass2 offered only an absence-of-evidence null (not a permitted output) and no official documentation was found contradicting pass1, so pass1's true is upheld at low confidence; Altium's officially named 'Workflow Processes' feature is enterprise process management, not an in-tool guided workflow.",
+      "source_url": "https://www.altium.com/documentation/altium-designer",
+      "confidence": "low"
+    },
+    {
+      "tool_name": "Altium Designer",
+      "field": "template_support",
+      "pass1": false,
+      "pass2": true,
+      "final_value": true,
+      "decision": "adopt_pass2",
+      "basis": "Official Altium documentation states the Workspace manages 'components, domain models, schematic sheets of circuitry, and design templates', and documents creating schematic (.SchDot) and project templates.",
+      "source_url": "https://www.altium.com/documentation/altium-designer",
+      "confidence": "high"
+    },
+    {
+      "tool_name": "Altium Designer",
+      "field": "ai_ml",
+      "pass1": false,
+      "pass2": null,
+      "final_value": true,
+      "decision": "new_value",
+      "basis": "Official Altium AI & Machine Learning resources page states 'Altium's software has built-in machine learning to increase productivity with design flows', which is direct vendor evidence for ML integration; pass2's null is not a permitted output.",
+      "source_url": "https://resources.altium.com/ai-design",
+      "confidence": "medium"
+    },
+    {
+      "tool_name": "Altium Designer",
+      "field": "validation_years",
+      "pass1": 20,
+      "pass2": 41,
+      "final_value": 41,
+      "decision": "adopt_pass2",
+      "basis": "Official Altium materials document the Protel PCB product lineage beginning in 1985 (first product launched 1985; official article 'From its beginnings ... as Protel PCB' and 'Since the mid-1980s, Protel has been used for PCB design'), giving 2026-1985=41 under the release-lineage definition.",
+      "source_url": "https://resources.altium.com/p/protel-pcb",
+      "confidence": "medium"
+    }
+  ]
+}

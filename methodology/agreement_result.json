@@ -1,0 +1,326 @@
+{
+  "n_tools": 9,
+  "comparisons": 117,
+  "agreement": 73,
+  "agreement_pct": 62.4,
+  "per_field": {
+    "category": {
+      "agree": 9,
+      "total": 9
+    },
+    "industry": {
+      "agree": 5,
+      "total": 9
+    },
+    "ui_technology": {
+      "agree": 5,
+      "total": 9
+    },
+    "ui_pattern": {
+      "agree": 2,
+      "total": 9
+    },
+    "architecture": {
+      "agree": 5,
+      "total": 9
+    },
+    "plugin_mechanism": {
+      "agree": 9,
+      "total": 9
+    },
+    "scripting": {
+      "agree": 7,
+      "total": 9
+    },
+    "coupling": {
+      "agree": 4,
+      "total": 9
+    },
+    "workflow_guide": {
+      "agree": 5,
+      "total": 9
+    },
+    "template_support": {
+      "agree": 8,
+      "total": 9
+    },
+    "cloud_support": {
+      "agree": 6,
+      "total": 9
+    },
+    "ai_ml": {
+      "agree": 8,
+      "total": 9
+    },
+    "validation_years": {
+      "agree": 0,
+      "total": 9
+    }
+  },
+  "disagreements": [
+    {
+      "tool": "ANSYS Twin Builder",
+      "field": "industry",
+      "pass1": "power_circuit",
+      "pass2": "multiphysics"
+    },
+    {
+      "tool": "ANSYS Twin Builder",
+      "field": "ui_technology",
+      "pass1": "custom",
+      "pass2": "unknown"
+    },
+    {
+      "tool": "ANSYS Twin Builder",
+      "field": "ui_pattern",
+      "pass1": "ribbon",
+      "pass2": "schematic"
+    },
+    {
+      "tool": "ANSYS Twin Builder",
+      "field": "validation_years",
+      "pass1": 10,
+      "pass2": 8
+    },
+    {
+      "tool": "Altair HyperWorks",
+      "field": "industry",
+      "pass1": "multiphysics",
+      "pass2": "structure_fea"
+    },
+    {
+      "tool": "Altair HyperWorks",
+      "field": "ui_pattern",
+      "pass1": "tree_based",
+      "pass2": "ribbon"
+    },
+    {
+      "tool": "Altair HyperWorks",
+      "field": "coupling",
+      "pass1": "orchestration",
+      "pass2": "file_exchange"
+    },
+    {
+      "tool": "Altair HyperWorks",
+      "field": "workflow_guide",
+      "pass1": false,
+      "pass2": true
+    },
+    {
+      "tool": "Altair HyperWorks",
+      "field": "validation_years",
+      "pass1": 30,
+      "pass2": 36
+    },
+    {
+      "tool": "Altium Designer",
+      "field": "ui_pattern",
+      "pass1": "hybrid",
+      "pass2": "panel_system"
+    },
+    {
+      "tool": "Altium Designer",
+      "field": "architecture",
+      "pass1": "layered",
+      "pass2": "plugin_based"
+    },
+    {
+      "tool": "Altium Designer",
+      "field": "scripting",
+      "pass1": "python",
+      "pass2": "unknown"
+    },
+    {
+      "tool": "Altium Designer",
+      "field": "coupling",
+      "pass1": "file_exchange",
+      "pass2": "single_kernel"
+    },
+    {
+      "tool": "Altium Designer",
+      "field": "workflow_guide",
+      "pass1": true,
+      "pass2": null
+    },
+    {
+      "tool": "Altium Designer",
+      "field": "template_support",
+      "pass1": false,
+      "pass2": true
+    },
+    {
+      "tool": "Altium Designer",
+      "field": "ai_ml",
+      "pass1": false,
+      "pass2": null
+    },
+    {
+      "tool": "Altium Designer",
+      "field": "validation_years",
+      "pass1": 20,
+      "pass2": 41
+    },
+    {
+      "tool": "JMAG",
+      "field": "ui_technology",
+      "pass1": "custom",
+      "pass2": "unknown"
+    },
+    {
+      "tool": "JMAG",
+      "field": "ui_pattern",
+      "pass1": "workbench",
+      "pass2": "unknown"
+    },
+    {
+      "tool": "JMAG",
+      "field": "coupling",
+      "pass1": "file_exchange",
+      "pass2": "single_kernel"
+    },
+    {
+      "tool": "JMAG",
+      "field": "cloud_support",
+      "pass1": false,
+      "pass2": true
+    },
+    {
+      "tool": "JMAG",
+      "field": "validation_years",
+      "pass1": 30,
+      "pass2": 43
+    },
+    {
+      "tool": "MSC Nastran",
+      "field": "ui_technology",
+      "pass1": "motif",
+      "pass2": "unknown"
+    },
+    {
+      "tool": "MSC Nastran",
+      "field": "ui_pattern",
+      "pass1": "multi_tool",
+      "pass2": "unknown"
+    },
+    {
+      "tool": "MSC Nastran",
+      "field": "coupling",
+      "pass1": "file_exchange",
+      "pass2": "co_simulation"
+    },
+    {
+      "tool": "MSC Nastran",
+      "field": "validation_years",
+      "pass1": 40,
+      "pass2": 55
+    },
+    {
+      "tool": "PrePoMax",
+      "field": "industry",
+      "pass1": "open_cae",
+      "pass2": "structure_fea"
+    },
+    {
+      "tool": "PrePoMax",
+      "field": "architecture",
+      "pass1": "layered",
+      "pass2": "unknown"
+    },
+    {
+      "tool": "PrePoMax",
+      "field": "workflow_guide",
+      "pass1": false,
+      "pass2": true
+    },
+    {
+      "tool": "PrePoMax",
+      "field": "validation_years",
+      "pass1": 3,
+      "pass2": 10
+    },
+    {
+      "tool": "Simcenter FloTHERM",
+      "field": "architecture",
+      "pass1": "layered",
+      "pass2": "monolithic"
+    },
+    {
+      "tool": "Simcenter FloTHERM",
+      "field": "coupling",
+      "pass1": "rom",
+      "pass2": "single_kernel"
+    },
+    {
+      "tool": "Simcenter FloTHERM",
+      "field": "workflow_guide",
+      "pass1": false,
+      "pass2": true
+    },
+    {
+      "tool": "Simcenter FloTHERM",
+      "field": "cloud_support",
+      "pass1": false,
+      "pass2": true
+    },
+    {
+      "tool": "Simcenter FloTHERM",
+      "field": "validation_years",
+      "pass1": 34,
+      "pass2": 37
+    },
+    {
+      "tool": "Simcenter STAR-CCM+",
+      "field": "ui_technology",
+      "pass1": "custom",
+      "pass2": "java"
+    },
+    {
+      "tool": "Simcenter STAR-CCM+",
+      "field": "ui_pattern",
+      "pass1": "tree_based",
+      "pass2": "workbench"
+    },
+    {
+      "tool": "Simcenter STAR-CCM+",
+      "field": "validation_years",
+      "pass1": 20,
+      "pass2": 22
+    },
+    {
+      "tool": "Simpack",
+      "field": "industry",
+      "pass1": "manufacturing",
+      "pass2": "structure_fea"
+    },
+    {
+      "tool": "Simpack",
+      "field": "ui_pattern",
+      "pass1": "workbench",
+      "pass2": "multi_tool"
+    },
+    {
+      "tool": "Simpack",
+      "field": "architecture",
+      "pass1": "layered",
+      "pass2": "plugin_based"
+    },
+    {
+      "tool": "Simpack",
+      "field": "scripting",
+      "pass1": "command_file",
+      "pass2": "javascript"
+    },
+    {
+      "tool": "Simpack",
+      "field": "cloud_support",
+      "pass1": false,
+      "pass2": null
+    },
+    {
+      "tool": "Simpack",
+      "field": "validation_years",
+      "pass1": 20,
+      "pass2": 33
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "definition": "validation_years = years from first documented public release to 2026",
+  "years": [
+    {
+      "tool_name": "PSCAD",
+      "first_release_year": 1993,
+      "validation_years": 33,
+      "source_url": "https://www.pscad.com/uploads/ck/files/HRC_PSCADBro_May6.pdf",
+      "confidence": "exact",
+      "note": "Official Manitoba HVDC Research Centre brochure timeline: '1993 PSCAD v.2 for Unix commercially available' and 'Since 1993, PSCAD has been the professionals' choice'; EMTDC roots date to 1975 but PSCAD the product was first sold commercially in 1993."
+    },
+    {
+      "tool_name": "3DEXPERIENCE SIMULIA",
+      "first_release_year": 2012,
+      "validation_years": 14,
+      "source_url": "https://investor.3ds.com/news-releases/news-release-details/dassault-systemes-opens-new-horizons-3d-experience",
+      "confidence": "exact",
+      "note": "Official Dassault Systemes press release of 2012-02-09 announces the 3DEXPERIENCE platform; 3ds.com About confirms 'In 2012 ... We launched the 3DEXPERIENCE platform'. SIMULIA (Abaqus lineage, 1978) applications were first delivered on this platform from 2012."
+    },
+    {
+      "tool_name": "Silvaco TCAD",
+      "first_release_year": 1984,
+      "validation_years": 42,
+      "source_url": "https://silvaco.com/",
+      "confidence": "approx",
+      "note": "Official site footer 'Copyright 1984-2025 Silvaco Group, Inc.' and 2021 official release 'For over 35 years, Silvaco has enabled its customers...'; company founding year 1984 is officially documented but the exact first TCAD product (Athena/Atlas/Victory line) release year is not separately documented, so 1984 is used as best-supported anchor."
+    },
+    {
+      "tool_name": "nedrysoft/componentSystem",
+      "first_release_year": 2020,
+      "validation_years": 6,
+      "source_url": "https://api.github.com/repos/nedrysoft/componentsystem",
+      "confidence": "exact",
+      "note": "Official GitHub API repo metadata: created_at 2020-12-03 ('A plugin system for Qt applications that allows modular applications to be created'); component first publicly released with the repository in December 2020."
+    },
+    {
+      "tool_name": "Zuken CR-8000",
+      "first_release_year": 2011,
+      "validation_years": 15,
+      "source_url": "https://news.cision.com/zuken/r/zuken-launches-new-pcb-design-suite-for-concept-to-manufacturing--multi-board-system-design,c9177571",
+      "confidence": "exact",
+      "note": "Official Zuken press release, 25 October 2011: 'Zuken today announces CR-8000, a new PCB design product family'."
+    },
+    {
+      "tool_name": "MSC ADAMS",
+      "first_release_year": 1977,
+      "validation_years": 49,
+      "source_url": "https://www.cadence.com/en_US/home/tools/msc-software/adams.html",
+      "confidence": "approx",
+      "note": "Official vendor page (MSC Software, now Cadence): 'Trusted Solver - Rely on five decades of development and validation in real-world applications'; five decades back from 2026 points to ~1976-1977, consistent with Mechanical Dynamics Inc. being founded in 1977 to commercialize ADAMS; exact first commercial shipment year not officially documented, hence approx."
+    },
+    {
+      "tool_name": "Qt QPluginLoader",
+      "first_release_year": 2001,
+      "validation_years": 25,
+      "source_url": "https://wiki.qt.io/Qt_History",
+      "confidence": "approx",
+      "note": "Official Qt Wiki Qt History lists '2001 Qt 3.0'; QPluginLoader (doc.qt.io/qt-6/qpluginloader.html, part of the Plugin Classes) has existed since the Qt 3.x era - official per-member docs mark later additions only ('introduced in Qt 4.2/4.4/5.0'), implying the class predates Qt 4.2; 2001 (Qt 3.0 release) used as best-supported year, approx."
+    },
+    {
+      "tool_name": "Actran",
+      "first_release_year": 2002,
+      "validation_years": 24,
+      "source_url": "https://en.wikipedia.org/wiki/Actran",
+      "confidence": "approx",
+      "note": "Development of Actran started in 1998 at Free Field Technologies (official Hexagon/FFT materials confirm '20 years of experience' in 2018/2019); the first broad commercial release was made available in 2002 after the founding consortium's three-year exclusivity ended; vendor does not state the year on current official pages, hence approx."
+    },
+    {
+      "tool_name": "LS-DYNA",
+      "first_release_year": 1989,
+      "validation_years": 37,
+      "source_url": "https://ftp.lstc.com/anonymous/outgoing/jday/manuals/LS-DYNA_Manual_Volume_I_R13.pdf",
+      "confidence": "approx",
+      "note": "Official LST/Ansys LS-DYNA Keyword User's Manual opens its 'Chronological History' at 1989-1990; LSTC's own materials state LS-DYNA3D was created when LSTC was founded at the end of 1988 to commercialize DYNA3D (1976 origin), so 1989 is the best-supported first commercial release year, approx."
+    },
+    {
+      "tool_name": "SALOME",
+      "first_release_year": 2000,
+      "validation_years": 26,
+      "source_url": "https://www.salome-platform.org/?page_id=676",
+      "confidence": "exact",
+      "note": "Official project history page: 'the first SALOME 1 project started in September 2000 within the French National Network ... (RNTL)'; release notes carry 'Copyright 2001-2025'."
+    },
+    {
+      "tool_name": "Synopsys TCAD",
+      "first_release_year": 1993,
+      "validation_years": 33,
+      "source_url": "https://iis.ee.ethz.ch/the-institute/spin-off-companies.html",
+      "confidence": "exact",
+      "note": "Official ETH Zurich Integrated Systems Laboratory spin-off list: '1993 - ISE Integrated Systems Engineering AG' (founder bio: 'In 1993, he founded ISE Integrated Systems Engineering AG'); TU Wien history notes ISE distributed the DIOS process simulator as a commercial tool from 1993; Synopsys acquired ISE in 2004 and continues the TCAD line as Sentaurus TCAD (official Synopsys acquisition list: '2004 ISE')."
+    },
+    {
+      "tool_name": "Abaqus",
+      "first_release_year": 1978,
+      "validation_years": 48,
+      "source_url": "https://www.nafems.org/blog/posts/analysis-origins-abaqus",
+      "confidence": "exact",
+      "note": "Hibbitt, Karlsson & Sorensen, Inc. launched 1 February 1978 (stylized abacus logo beads set to 2-1-1978) and the first ABAQUS version was delivered in September 1978; Dassault Systemes acquired the company in 2005 and continues it as the SIMULIA Abaqus product line."
+    },
+    {
+      "tool_name": "Cadence Celsius Studio",
+      "first_release_year": 2019,
+      "validation_years": 7,
+      "source_url": "https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2019/cadence-launches-celsius-thermal-solver--delivering-the-industry.html",
+      "confidence": "exact",
+      "note": "Official Cadence press release, 17 September 2019: 'Cadence Launches Celsius Thermal Solver', first product of the Celsius line that now forms Celsius Studio."
+    }
+  ]
+}

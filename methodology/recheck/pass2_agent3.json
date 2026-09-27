@@ -1,0 +1,61 @@
+{
+  "pass": 2,
+  "blind": true,
+  "extractor": "agent3",
+  "tools": [
+    {
+      "tool_name": "Simcenter FloTHERM",
+      "category": "commercial",
+      "industry": "thermal_cfd",
+      "ui_technology": "custom",
+      "ui_pattern": "tree_based",
+      "architecture": "monolithic",
+      "plugin_mechanism": "custom",
+      "scripting": "python",
+      "coupling": "single_kernel",
+      "workflow_guide": true,
+      "template_support": true,
+      "cloud_support": true,
+      "ai_ml": false,
+      "validation_years": 37,
+      "source_url": "https://www.siemens.com/en-us/products/simcenter/fluids-thermal-simulation/flotherm/",
+      "evidence_notes": "category/industry: official Siemens product page: 'leading electronics cooling simulation software' / electronics cooling CFD. ui_technology=custom: official Siemens blog (Bornoff, 2012) describes FloTHERM (1989) as first CFD software with 'all pre and post-processing capabilities contained within a single WIMP based graphical user interface'; UI toolkit never disclosed. ui_pattern=tree_based: official Simcenter blog (2019): 'Select the parts of interest in the Project Manager tree'. architecture=monolithic: single integrated application (pre+solve+post in one product per official history/fact sheet). plugin_mechanism=custom: official fact sheet: external automation 'through FloXML, and recording and replaying interactive operations with FloSCRIPT'; ECXML for vendor interchange; no third-party plugin system documented. scripting=python: official product-page webinar link: 'automation of PCB thermal analysis workflow and electronics cooling simulation tasks using Python, XML scripting, and recorded Macros'; official Siemens training course 'Simcenter Scripting for FloTHERM' (FloXML/FloSCRIPT); recorded FloSCRIPT is XML-based. coupling=single_kernel: conjugate fluid/solid heat transfer solved in one tailored solver; BCI-ROM export (MATLAB/Simulink, VHDL-AMS, FMU) is model-reduction output, not the coupling strategy. workflow_guide=true: 'quick intuitive IC package thermal model generation' (Flotherm Pack Module) + automatic model calibration on official product page. template_support=true: SmartPart libraries, 'extensive libraries', ROHM component libraries (official page/blog). cloud_support=true: 'free 30-day cloud evaluation' (official Simcenter blog) and Siemens 'Simcenter Cloud HPC' press release (AWS-hosted, Simcenter solver technologies). ai_ml=false: no AI/ML feature documented in official FloTHERM product/blog sources reviewed; BCI-ROM is reduced-order modeling, not AI/ML. validation_years=37: official Siemens blog: 'V1.1 Beta was released in August 1989' (Flomerics); product page: 'more than 34 years of development' (stale text); 2026-1989=37."
+    },
+    {
+      "tool_name": "Simcenter STAR-CCM+",
+      "category": "commercial",
+      "industry": "thermal_cfd",
+      "ui_technology": "java",
+      "ui_pattern": "workbench",
+      "architecture": "layered",
+      "plugin_mechanism": "custom",
+      "scripting": "java",
+      "coupling": "single_kernel",
+      "workflow_guide": true,
+      "template_support": true,
+      "cloud_support": true,
+      "ai_ml": true,
+      "validation_years": 22,
+      "source_url": "https://www.siemens.com/en-us/products/simcenter/fluids-thermal-simulation/star-ccm/",
+      "evidence_notes": "category/industry: official Siemens page: 'multiphysics computational fluid dynamics (CFD) software' -> thermal_cfd (CFD is the core; multiphysics breadth noted: multiphase, particle, reactive flow, FSI, aeroacoustics, electrodynamics). ui_technology=java: official STAR-CCM+ Installation Guide requires/installs Java SDK/JDK for the client; official Siemens support KB 'Simcenter STAR-CCM+ Java Knowledge Base' documents Java API/macros. ui_pattern=workbench: official page: 'single, unified CFD tool', 'single fully integrated user interface' covering pre-processing, meshing, multiphysics, analysis, VR. architecture=layered: documented client-server architecture (GUI client + solver server; official installation guide/user guide references). plugin_mechanism=custom: extension via vendor Java API macros and compiled User Code (libusr.so, official installation guide); no OSGi/formal plugin system documented. scripting=java: official support KB on Java macros/API; batch mode runs '-batch <macro>.java <sim>'. coupling=single_kernel: official multiphysics fact sheet: multidisciplinary technologies in 'a single integrated user interface ... in a fully coupled manner' (one solver platform). workflow_guide=true: official page: 'powerful end-to-end workflow automation'. template_support=true: official page: 'automated workflows and templates'. cloud_support=true: Power-on-Demand cloud licensing (official installation guide), 'Simcenter Cloud HPC' hosted on AWS (Siemens press release 2022), and STAR-CCM+ 'accessed through the cloud' on Rescale (Siemens press release). ai_ml=true: official Siemens release blog for STAR-CCM+ 2606: 'Train AI models up to 3x faster' (integrated AI/ML model training). validation_years=22: CD-adapco (vendor) catalog: 'From its first release in 2004'; Siemens acquired CD-adapco 2016; 2026-2004=22."
+    },
+    {
+      "tool_name": "Simpack",
+      "category": "commercial",
+      "industry": "structure_fea",
+      "ui_technology": "custom",
+      "ui_pattern": "multi_tool",
+      "architecture": "plugin_based",
+      "plugin_mechanism": "custom",
+      "scripting": "javascript",
+      "coupling": "co_simulation",
+      "workflow_guide": true,
+      "template_support": true,
+      "cloud_support": null,
+      "ai_ml": false,
+      "validation_years": 33,
+      "source_url": "https://www.3ds.com/products/simulia/simpack/",
+      "evidence_notes": "category/industry: official 3ds.com: 'general purpose multibody simulation (MBS) software' for dynamic analysis of mechanical/mechatronic systems (automotive, engine, rail, drivetrain, wind, aerospace) -> structure_fea is the closest form enum (MBS is structural/system dynamics, not FEA proper). ui_technology=custom: official core page documents 'Icon-driven and user-friendly interface'; underlying UI toolkit not officially disclosed. ui_pattern=multi_tool: official pages document separate cooperating tools: Simpack Pre (pre-processor), Simpack Solver, Simpack Post (post-processor), Simpack Wizard. architecture=plugin_based: official core page: core modules are 'the foundation for Simpack's industry and application-specific add-on products' (~40+ separately licensed add-on modules: Automotive, Rail, Engine, Drivetrain, EHD, Realtime, etc.). plugin_mechanism=custom: officially documented user extensions: 'Extendable by user-defined elements' and 'open structure, allowing the implementation of user-defined wear and RCF laws'; user routines. scripting=javascript: official SIMULIA community post (2024) documents 'Simpack Javascript code' (.sjs files, script CLI '--script', Node.js inspector debugging); official training 'SIMPACK SCRIPTING' for Pre/Post automation. WARNING: 'javascript' is OUTSIDE the extraction form's scripting enum (python/tcl/vba/java/pcl/command_file/none) - true documented value recorded instead of forcing an enum fit. coupling=co_simulation: official flexible-body page: 'co-simulation with the Abaqus solver'; Simulink co-simulation (official DS listing); Multi Domain Interfaces product line. workflow_guide=true: Simpack Wizard 'streamlines the setup of standardized industry workflows' / 'process standardization and automation' (official core page). template_support=true: Post 'User-defined templates facilitate report generation'; Wizard model database reuse; Engine 'pre-defined and fully parameterized database models' (official pages). cloud_support=null: no Simpack-specific cloud deployment documented in official sources reviewed (3DEXPERIENCE cloud pages cover SIMULIA apps generically; no official Simpack-on-cloud page found). ai_ml=false: no AI/ML integration documented in official sources reviewed. validation_years=33: SIMPACK GmbH (former INTEC GmbH) founded 1993 as DLR spin-off developing/commercializing SIMPACK (ITEA partner profile); 1999 VTT report confirms commercial distribution by Intec GmbH; vendor does not state exact first-release year, so 1993->2026=33 is approximate."
+    }
+  ]
+}

@@ -96,7 +96,9 @@
         "java",
         "pcl",
         "command_file",
-        "none"
+        "none",
+        "delphi",
+        "javascript"
       ],
       "description": "Primary scripting language"
     },
@@ -135,7 +137,7 @@
     {
       "name": "validation_years",
       "type": "int",
-      "description": "Years of industrial validation"
+      "description": "Years since first documented public release (to 2026)"
     },
     {
       "name": "source_url",
@@ -152,39 +154,40 @@
     },
     "by_industry": {
       "pcb_eda": 8,
-      "open_cae": 5,
-      "multiphysics": 5,
+      "structure_fea": 6,
+      "multiphysics": 6,
+      "open_cae": 4,
       "motor_em": 4,
       "thermal_cfd": 4,
-      "structure_fea": 4,
       "optics_tcad": 4,
-      "manufacturing": 4,
-      "power_circuit": 4,
       "qt_framework": 3,
+      "manufacturing": 3,
+      "power_circuit": 3,
       "ic_eda": 1
     },
     "by_architecture": {
-      "plugin_based": 21,
-      "layered": 20,
+      "plugin_based": 23,
+      "layered": 18,
       "monolithic": 5
     },
     "by_ui_technology": {
-      "custom": 34,
+      "custom": 33,
       "qt": 8,
       "python": 2,
-      "java": 1,
+      "java": 2,
       "motif": 1
     },
     "by_ui_pattern": {
       "workbench": 20,
-      "hybrid": 7,
-      "tree_based": 5,
+      "hybrid": 6,
+      "multi_tool": 5,
       "ribbon": 4,
-      "multi_tool": 4,
+      "tree_based": 3,
       "single_doc": 3,
+      "schematic": 2,
       "menu": 1,
       "template_driven": 1,
-      "schematic": 1
+      "panel_system": 1
     },
     "by_plugin_mechanism": {
       "custom": 40,
@@ -192,25 +195,27 @@
       "ipc_api": 1
     },
     "by_scripting": {
-      "python": 30,
-      "command_file": 7,
+      "python": 29,
+      "command_file": 6,
       "tcl": 4,
       "none": 2,
       "java": 2,
-      "vba": 1
+      "vba": 1,
+      "delphi": 1,
+      "javascript": 1
     },
     "by_coupling": {
-      "file_exchange": 16,
-      "single_kernel": 14,
-      "co_simulation": 11,
-      "orchestration": 3,
-      "rom": 2
+      "single_kernel": 17,
+      "file_exchange": 14,
+      "co_simulation": 12,
+      "orchestration": 2,
+      "rom": 1
     },
     "features": {
-      "workflow_guide_true": 31,
-      "template_support_true": 29,
-      "cloud_support_true": 23,
-      "ai_ml_true": 17
+      "workflow_guide_true": 34,
+      "template_support_true": 30,
+      "cloud_support_true": 26,
+      "ai_ml_true": 18
     }
   }
 }

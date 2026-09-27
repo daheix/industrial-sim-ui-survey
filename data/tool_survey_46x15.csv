@@ -1,47 +1,47 @@
 tool_name,category,industry,ui_technology,ui_pattern,architecture,plugin_mechanism,scripting,coupling,workflow_guide,template_support,cloud_support,ai_ml,validation_years,source_url
-FreeCAD,open_source,open_cae,qt,workbench,plugin_based,custom,python,file_exchange,True,False,False,False,20,https://wiki.freecad.org/Workbenches
-SALOME,open_source,open_cae,qt,workbench,plugin_based,custom,python,file_exchange,False,False,False,False,20,https://www.salome-platform.org
-ElmerGUI,open_source,open_cae,qt,hybrid,layered,custom,none,file_exchange,False,True,False,False,15,https://elmerfem.org
-CalculiX CAE,open_source,open_cae,python,menu,monolithic,none,python,file_exchange,False,False,False,False,5,https://www.calculix.de
-PrePoMax,open_source,open_cae,custom,tree_based,layered,none,none,file_exchange,False,False,False,False,3,https://prepomax.fs.um.si
-KiCad,open_source,pcb_eda,custom,hybrid,plugin_based,ipc_api,python,file_exchange,False,False,False,False,30,https://docs.kicad.org
-ANSYS Motor-CAD,commercial,motor_em,custom,template_driven,layered,custom,python,single_kernel,True,True,True,False,15,https://www.ansys.com/products/electronics/ansys-motor-cad
-JMAG,commercial,motor_em,custom,workbench,layered,custom,python,file_exchange,True,True,False,True,30,https://www.jmag-international.com
-Simcenter Flux,commercial,motor_em,custom,workbench,layered,custom,python,co_simulation,False,True,False,True,30,https://www.plm.automation.siemens.com/global/en/products/simcenter/flux.html
+FreeCAD,open_source,open_cae,qt,workbench,plugin_based,custom,python,file_exchange,True,False,False,False,24,https://wiki.freecad.org/Workbenches
+SALOME,open_source,open_cae,qt,workbench,plugin_based,custom,python,file_exchange,False,False,False,False,26,https://www.salome-platform.org
+ElmerGUI,open_source,open_cae,qt,hybrid,layered,custom,none,file_exchange,False,True,False,False,18,https://elmerfem.org
+CalculiX CAE,open_source,open_cae,python,menu,monolithic,none,python,file_exchange,False,False,False,False,28,https://www.calculix.de
+PrePoMax,open_source,structure_fea,custom,tree_based,layered,none,none,file_exchange,True,False,False,False,10,https://prepomax.fs.um.si
+KiCad,open_source,pcb_eda,custom,hybrid,plugin_based,ipc_api,python,file_exchange,False,False,False,False,34,https://docs.kicad.org
+ANSYS Motor-CAD,commercial,motor_em,custom,template_driven,layered,custom,python,single_kernel,True,True,True,False,27,https://www.ansys.com/products/electronics/ansys-motor-cad
+JMAG,commercial,motor_em,custom,workbench,layered,custom,python,single_kernel,True,True,True,True,43,https://www.jmag-international.com
+Simcenter Flux,commercial,motor_em,custom,workbench,layered,custom,python,co_simulation,False,True,False,True,43,https://www.plm.automation.siemens.com/global/en/products/simcenter/flux.html
 CST Studio Suite,commercial,motor_em,custom,ribbon,plugin_based,custom,vba,single_kernel,True,True,True,False,20,https://www.3ds.com/products/simulia/cst-studio-suite
-ANSYS AEDT,commercial,pcb_eda,custom,workbench,plugin_based,custom,python,single_kernel,True,True,True,True,20,https://www.ansys.com/products/electronics/ansys-electronics-desktop
-COMSOL,commercial,multiphysics,java,ribbon,plugin_based,custom,java,single_kernel,True,True,True,False,15,https://doc.comsol.com
-Keysight ADS,commercial,pcb_eda,custom,workbench,layered,custom,python,co_simulation,True,True,True,False,20,https://www.keysight.com/us/en/products/advanced-design-system.html
-HFSS 3D Layout,commercial,pcb_eda,custom,workbench,layered,custom,python,single_kernel,True,False,True,False,15,https://www.ansys.com/products/electronics/ansys-hfss
-Cadence Allegro X,commercial,pcb_eda,custom,workbench,plugin_based,custom,tcl,co_simulation,True,True,True,True,30,https://www.cadence.com/en_US/home/tools/pcb-design/allegro-x-design-system.html
-Altium Designer,commercial,pcb_eda,custom,hybrid,layered,custom,python,file_exchange,True,False,True,False,20,https://www.altium.com/altium-designer
-Zuken CR-8000,commercial,pcb_eda,custom,workbench,plugin_based,custom,python,single_kernel,True,True,False,True,30,https://www.zuken.com/us/product/cr-8000
-Siemens Xpedition+HyperLynx,commercial,pcb_eda,custom,multi_tool,layered,custom,tcl,file_exchange,True,False,False,False,30,https://eda.sw.siemens.com/en-US/pcb/xpedition/
-ANSYS Workbench,commercial,multiphysics,custom,schematic,plugin_based,custom,python,co_simulation,True,True,True,True,20,https://www.ansys.com/products/platform
-3DEXPERIENCE SIMULIA,commercial,multiphysics,custom,workbench,plugin_based,custom,python,co_simulation,True,True,True,False,15,https://www.3ds.com/products/simulia
-Altair HyperWorks,commercial,multiphysics,custom,tree_based,plugin_based,custom,tcl,orchestration,False,True,True,True,30,https://altair.com/hyperworks
-LS-DYNA,commercial,multiphysics,custom,single_doc,monolithic,none,command_file,single_kernel,False,False,False,False,40,https://www.lstc.com/products/ls-dyna
-ANSYS Icepak,commercial,thermal_cfd,custom,tree_based,plugin_based,custom,python,co_simulation,True,True,True,True,20,https://www.ansys.com/products/electronics/ansys-icepak
-Simcenter FloTHERM,commercial,thermal_cfd,custom,tree_based,layered,custom,python,rom,False,True,False,False,34,https://plm.sw.siemens.com/en-US/simcenter/fluid-thermal-simulation/flotherm/
-Cadence Celsius Studio,commercial,thermal_cfd,custom,workbench,layered,custom,python,single_kernel,True,False,True,True,20,https://www.cadence.com/en_US/home/tools/system-analysis/thermal-analysis.html
-Simcenter STAR-CCM+,commercial,thermal_cfd,custom,tree_based,layered,custom,java,single_kernel,True,True,True,True,20,https://www.plm.automation.siemens.com/global/en/products/simcenter/starccm.html
-Synopsys,commercial,ic_eda,custom,multi_tool,plugin_based,custom,tcl,orchestration,True,True,True,True,30,https://www.synopsys.com
-Qt QUiLoader,open_source,qt_framework,qt,hybrid,layered,custom,python,file_exchange,False,False,False,False,15,https://doc.qt.io/qt-6/quiloader.html
-Qt QPluginLoader,open_source,qt_framework,qt,hybrid,plugin_based,custom,python,file_exchange,False,False,False,False,15,https://doc.qt.io/qt-6/qpluginloader.html
-nedrysoft/componentSystem,open_source,qt_framework,qt,hybrid,plugin_based,custom,python,file_exchange,False,False,False,False,3,https://github.com/nedrysoft/componentSystem
-Abaqus,commercial,structure_fea,qt,workbench,layered,custom,python,single_kernel,True,False,True,True,30,https://www.3ds.com/products/simulia/abaqus
-MSC Nastran,commercial,structure_fea,motif,multi_tool,monolithic,custom,command_file,file_exchange,False,False,True,False,40,https://hexagon.com/products/product-fields/computer-aided-engineering/msc-nastran
-LMS Virtual.Lab,commercial,structure_fea,qt,workbench,plugin_based,custom,python,co_simulation,True,True,False,False,20,https://www.plm.automation.siemens.com/global/en/products/simcenter-3d.html
-Actran,commercial,structure_fea,python,single_doc,monolithic,none,python,file_exchange,False,False,True,False,15,https://www.plm.automation.siemens.com/global/en/products/simcenter/actran.html
-Zemax OpticStudio,commercial,optics_tcad,custom,workbench,layered,custom,python,file_exchange,True,True,True,True,20,https://www.ansys.com/products/optics/optic-studio
-Lumerical,commercial,optics_tcad,custom,workbench,plugin_based,custom,python,single_kernel,True,True,True,False,15,https://www.lumerical.com
-Synopsys TCAD,commercial,optics_tcad,custom,workbench,plugin_based,custom,command_file,orchestration,True,True,False,True,30,https://www.synopsys.com/silicon/tcad.html
-Silvaco TCAD,commercial,optics_tcad,custom,workbench,layered,custom,python,co_simulation,True,True,False,True,30,https://silvaco.com
-DEFORM,commercial,manufacturing,custom,multi_tool,layered,custom,command_file,single_kernel,True,True,False,False,20,https://www.deform.com
-AutoForm,commercial,manufacturing,custom,workbench,plugin_based,custom,python,single_kernel,True,True,True,False,25,https://www.autoform.com
-MSC ADAMS,commercial,manufacturing,custom,workbench,layered,custom,command_file,co_simulation,True,True,False,False,30,https://hexagon.com/products/product-fields/computer-aided-engineering/adams
-Simpack,commercial,manufacturing,custom,workbench,layered,custom,command_file,co_simulation,True,True,False,False,20,https://www.3ds.com/products/simulia/simpack
-PSCAD,commercial,power_circuit,custom,hybrid,layered,custom,python,co_simulation,True,True,False,False,40,https://www.pscad.com
-MATLAB/Simulink,commercial,power_circuit,custom,ribbon,plugin_based,custom,python,single_kernel,True,True,True,True,40,https://www.mathworks.com/products/simulink.html
-ANSYS Twin Builder,commercial,power_circuit,custom,ribbon,plugin_based,custom,python,rom,True,True,True,True,10,https://www.ansys.com/products/digital-twins
-LTspice,commercial,power_circuit,custom,single_doc,monolithic,none,command_file,file_exchange,False,False,False,False,25,https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html
+ANSYS AEDT,commercial,pcb_eda,custom,workbench,plugin_based,custom,python,single_kernel,True,True,True,True,36,https://www.ansys.com/products/electronics/ansys-electronics-desktop
+COMSOL,commercial,multiphysics,java,ribbon,plugin_based,custom,java,single_kernel,True,True,True,False,28,https://doc.comsol.com
+Keysight ADS,commercial,pcb_eda,custom,workbench,layered,custom,python,co_simulation,True,True,True,False,41,https://www.keysight.com/us/en/products/advanced-design-system.html
+HFSS 3D Layout,commercial,pcb_eda,custom,workbench,layered,custom,python,single_kernel,True,False,True,False,14,https://www.ansys.com/products/electronics/ansys-hfss
+Cadence Allegro X,commercial,pcb_eda,custom,workbench,plugin_based,custom,tcl,co_simulation,True,True,True,True,4,https://www.cadence.com/en_US/home/tools/pcb-design/allegro-x-design-system.html
+Altium Designer,commercial,pcb_eda,custom,panel_system,plugin_based,custom,delphi,single_kernel,True,True,True,True,41,https://www.altium.com/altium-designer
+Zuken CR-8000,commercial,pcb_eda,custom,workbench,plugin_based,custom,python,single_kernel,True,True,False,True,15,https://www.zuken.com/us/product/cr-8000
+Siemens Xpedition+HyperLynx,commercial,pcb_eda,custom,multi_tool,layered,custom,tcl,file_exchange,True,False,False,False,38,https://eda.sw.siemens.com/en-US/pcb/xpedition/
+ANSYS Workbench,commercial,multiphysics,custom,schematic,plugin_based,custom,python,co_simulation,True,True,True,True,26,https://www.ansys.com/products/platform
+3DEXPERIENCE SIMULIA,commercial,multiphysics,custom,workbench,plugin_based,custom,python,co_simulation,True,True,True,False,14,https://www.3ds.com/products/simulia
+Altair HyperWorks,commercial,multiphysics,custom,ribbon,plugin_based,custom,tcl,file_exchange,True,True,True,True,36,https://altair.com/hyperworks
+LS-DYNA,commercial,multiphysics,custom,single_doc,monolithic,none,command_file,single_kernel,False,False,False,False,37,https://www.lstc.com/products/ls-dyna
+ANSYS Icepak,commercial,thermal_cfd,custom,tree_based,plugin_based,custom,python,co_simulation,True,True,True,True,29,https://www.ansys.com/products/electronics/ansys-icepak
+Simcenter FloTHERM,commercial,thermal_cfd,custom,tree_based,layered,custom,python,single_kernel,True,True,True,False,37,https://plm.sw.siemens.com/en-US/simcenter/fluid-thermal-simulation/flotherm/
+Cadence Celsius Studio,commercial,thermal_cfd,custom,workbench,layered,custom,python,single_kernel,True,False,True,True,7,https://www.cadence.com/en_US/home/tools/system-analysis/thermal-analysis.html
+Simcenter STAR-CCM+,commercial,thermal_cfd,java,workbench,layered,custom,java,single_kernel,True,True,True,True,22,https://www.plm.automation.siemens.com/global/en/products/simcenter/starccm.html
+Synopsys,commercial,ic_eda,custom,multi_tool,plugin_based,custom,tcl,orchestration,True,True,True,True,40,https://www.synopsys.com
+Qt QUiLoader,open_source,qt_framework,qt,hybrid,layered,custom,python,file_exchange,False,False,False,False,19,https://doc.qt.io/qt-6/quiloader.html
+Qt QPluginLoader,open_source,qt_framework,qt,hybrid,plugin_based,custom,python,file_exchange,False,False,False,False,25,https://doc.qt.io/qt-6/qpluginloader.html
+nedrysoft/componentSystem,open_source,qt_framework,qt,hybrid,plugin_based,custom,python,file_exchange,False,False,False,False,6,https://github.com/nedrysoft/componentSystem
+Abaqus,commercial,structure_fea,qt,workbench,layered,custom,python,single_kernel,True,False,True,True,48,https://www.3ds.com/products/simulia/abaqus
+MSC Nastran,commercial,structure_fea,motif,multi_tool,monolithic,custom,command_file,co_simulation,False,False,True,False,55,https://hexagon.com/products/product-fields/computer-aided-engineering/msc-nastran
+LMS Virtual.Lab,commercial,structure_fea,qt,workbench,plugin_based,custom,python,co_simulation,True,True,False,False,24,https://www.plm.automation.siemens.com/global/en/products/simcenter-3d.html
+Actran,commercial,structure_fea,python,single_doc,monolithic,none,python,file_exchange,False,False,True,False,24,https://www.plm.automation.siemens.com/global/en/products/simcenter/actran.html
+Zemax OpticStudio,commercial,optics_tcad,custom,workbench,layered,custom,python,file_exchange,True,True,True,True,35,https://www.ansys.com/products/optics/optic-studio
+Lumerical,commercial,optics_tcad,custom,workbench,plugin_based,custom,python,single_kernel,True,True,True,False,23,https://www.lumerical.com
+Synopsys TCAD,commercial,optics_tcad,custom,workbench,plugin_based,custom,command_file,orchestration,True,True,False,True,33,https://www.synopsys.com/silicon/tcad.html
+Silvaco TCAD,commercial,optics_tcad,custom,workbench,layered,custom,python,co_simulation,True,True,False,True,42,https://silvaco.com
+DEFORM,commercial,manufacturing,custom,multi_tool,layered,custom,command_file,single_kernel,True,True,False,False,37,https://www.deform.com
+AutoForm,commercial,manufacturing,custom,workbench,plugin_based,custom,python,single_kernel,True,True,True,False,31,https://www.autoform.com
+MSC ADAMS,commercial,manufacturing,custom,workbench,layered,custom,command_file,co_simulation,True,True,False,False,49,https://hexagon.com/products/product-fields/computer-aided-engineering/adams
+Simpack,commercial,structure_fea,custom,multi_tool,plugin_based,custom,javascript,co_simulation,True,True,True,False,33,https://www.3ds.com/products/simulia/simpack
+PSCAD,commercial,power_circuit,custom,hybrid,layered,custom,python,co_simulation,True,True,False,False,33,https://www.pscad.com
+MATLAB/Simulink,commercial,power_circuit,custom,ribbon,plugin_based,custom,python,single_kernel,True,True,True,True,42,https://www.mathworks.com/products/simulink.html
+ANSYS Twin Builder,commercial,multiphysics,custom,schematic,plugin_based,custom,python,rom,True,True,True,True,8,https://www.ansys.com/products/digital-twins
+LTspice,commercial,power_circuit,custom,single_doc,monolithic,none,command_file,file_exchange,False,False,False,False,27,https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html
