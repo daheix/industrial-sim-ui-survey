@@ -1,5 +1,8 @@
 # Industrial Simulation UI & Extension Architecture Survey — Replication Package
 
+> **Current release: v1.2.0 (2026-10-03)** — 5 cells corrected after a third independent blind re-extraction; enum coding rules added. See [CHANGELOG.md](CHANGELOG.md).
+> **Full paper source + number-by-number verification scripts live in the companion replication package: [daheix/paper01-sim-ui-replication](https://github.com/daheix/paper01-sim-ui-replication) (v1.0.0).**
+
 Replication package for the empirical study **"User Interface and Extension Architecture in Industrial Simulation Software: An Empirical Study of 46 Tools"**.
 
 This package releases the complete, machine-readable extraction dataset so that every number reported in the paper can be independently recomputed.
@@ -8,12 +11,14 @@ This package releases the complete, machine-readable extraction dataset so that 
 
 | File | Description |
 |------|-------------|
-| `data/tool_survey_raw.json` | Primary dataset: 46 tools × 15 fields, verbatim as extracted (v1.1) |
+| `data/tool_survey_raw.json` | Primary dataset: 46 tools × 15 fields, verbatim as extracted (v1.2) |
 | `data/tool_survey_46x15.csv` | Same dataset as CSV (header + 46 rows) |
 | `data/extraction_form.json` | Extraction form: field definitions, enums, and derived statistics |
 | `methodology/agreement_result.json` | Second-pass re-extraction agreement statistics (9 tools × 13 fields) |
 | `methodology/adjudication_changelog.json` | Cell-level adjudication log: every revised cell with old/new value and confidence |
 | `methodology/recheck/` | Raw second-pass extractions and adjudication decision files (per agent) |
+| `methodology/pass3_agent{1,2,3}.json`, `methodology/pass3_adjudication.json`, `methodology/pass3_agreement_result.json` | Third blind re-extraction (9 tools, 3 extractors): raw extractions, 34-disagreement adjudication log, agreement/κ results |
+| `methodology/compare_pass3.py` | Recomputes third-round agreement statistics |
 | `methodology/compare.py` | Recomputes agreement statistics from raw files |
 | `methodology/merge_adjudication.py` | Replays the adjudication merge and recomputes dataset statistics |
 | `methodology/verify_claims.py` | Checks every headline claim of the paper against `data/tool_survey_raw.json` |
