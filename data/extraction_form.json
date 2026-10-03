@@ -1,5 +1,5 @@
 {
-  "extraction_form_version": "1.0",
+  "extraction_form_version": "1.2",
   "fields": [
     {
       "name": "tool_name",
@@ -84,7 +84,7 @@
         "ipc_api",
         "none"
       ],
-      "description": "Plugin/extension mechanism"
+      "description": "Plugin/extension mechanism. Coding rules (v1.2.0): code \"ipc_api\" only when the primary extension path is a language-agnostic process-boundary API (e.g., CORBA/IDL servers, Protobuf-over-socket); vendor scripting APIs, solver subroutine hooks, and Eclipse-RCP-style in-process module systems are \"custom\"; a tool with no documented extension path is \"none\"."
     },
     {
       "name": "scripting",
@@ -112,7 +112,7 @@
         "rom",
         "orchestration"
       ],
-      "description": "Multi-physics coupling strategy"
+      "description": "Multi-physics coupling strategy. Coding rules (v1.2.0): code \"orchestration\" when coupling is expressed as a project/workflow graph that wires separate components (e.g., Workbench schematic links, YACS supervision); \"co_simulation\" requires documented runtime data exchange between solvers; \"rom\" when coupling flows through a reduced-order model; \"file_exchange\" when components exchange result files; \"single_kernel\" when all physics run in one code base."
     },
     {
       "name": "workflow_guide",
@@ -137,7 +137,7 @@
     {
       "name": "validation_years",
       "type": "int",
-      "description": "Years since first documented public release (to 2026)"
+      "description": "Years of industrial use. Definition (v1.2.0, single reference point): years elapsed from the first publicly documented release of the tool to 2026, taken from official product-history pages; acquisition or company founding dates are not used."
     },
     {
       "name": "source_url",

@@ -1,0 +1,295 @@
+{
+ "pass": 3,
+ "date": "2026-10-03",
+ "n_field_diffs": 34,
+ "legend": {
+  "A": "原文有据、盲提证据不可及或盲提漏检——不改数据",
+  "B": "枚举边界两可（类目语义重叠/口径选择）——不改数据，v1.2.0 补枚举判定规则说明",
+  "C": "原文应修（盲提取得官方文档硬证据）——建议 v1.2.0 修改+CHANGELOG"
+ },
+ "diffs": [
+  {
+   "tool": "Actran",
+   "field": "industry",
+   "pub": "structure_fea",
+   "blind": "multiphysics",
+   "cls": "B",
+   "why": "枚举无 acoustics 类，声-固-流两可"
+  },
+  {
+   "tool": "Actran",
+   "field": "ui_technology",
+   "pub": "python",
+   "blind": "java",
+   "cls": "A",
+   "why": "原文有据（Actran VI Python 脚本/GUI 官方文档）；Siemens/Hexagon 全 403，agent 自认低置信推断"
+  },
+  {
+   "tool": "Actran",
+   "field": "ui_pattern",
+   "pub": "single_doc",
+   "blind": "tree_based",
+   "cls": "B",
+   "why": "VI 模型树 vs 文件驱动工作流两可"
+  },
+  {
+   "tool": "Actran",
+   "field": "architecture",
+   "pub": "monolithic",
+   "blind": "layered",
+   "cls": "B",
+   "why": "VI→求解器→后处理分层 vs 单体两可"
+  },
+  {
+   "tool": "Actran",
+   "field": "plugin_mechanism",
+   "pub": "none",
+   "blind": "custom",
+   "cls": "C",
+   "why": "用户子程序（user subroutines）为文档化扩展机制，none 偏严"
+  },
+  {
+   "tool": "Actran",
+   "field": "cloud_support",
+   "pub": "true",
+   "blind": "false",
+   "cls": "A",
+   "why": "云证据在 Hexagon/Siemens 403 域内，agent 不可及"
+  },
+  {
+   "tool": "ANSYS Motor-CAD",
+   "field": "architecture",
+   "pub": "layered",
+   "blind": "monolithic",
+   "cls": "B",
+   "why": "内置多求解器单体 vs 分层两可"
+  },
+  {
+   "tool": "ANSYS Motor-CAD",
+   "field": "plugin_mechanism",
+   "pub": "custom",
+   "blind": "ipc_api",
+   "cls": "B",
+   "why": "PyMotorCAD JSON-RPC over HTTP 硬证据=IPC API；原文 custom 亦可辩——建议 v1.2.0 枚举规则注明'专有协议进程间 API 归 ipc_api'"
+  },
+  {
+   "tool": "ANSYS Motor-CAD",
+   "field": "coupling",
+   "pub": "single_kernel",
+   "blind": "co_simulation",
+   "cls": "B",
+   "why": "内置 EM-热耦合（原文口径）与外部 Maxwell/CFD 协同（官方页原文）两个事实并存"
+  },
+  {
+   "tool": "ANSYS Motor-CAD",
+   "field": "workflow_guide",
+   "pub": "true",
+   "blind": "false",
+   "cls": "A",
+   "why": "官方文档区 guide 证据盲提未及（只读产品页）"
+  },
+  {
+   "tool": "ANSYS Motor-CAD",
+   "field": "cloud_support",
+   "pub": "true",
+   "blind": "false",
+   "cls": "A",
+   "why": "Ansys Cloud 支持列表在 Cloud 页，agent 未及"
+  },
+  {
+   "tool": "ANSYS Workbench",
+   "field": "scripting",
+   "pub": "python",
+   "blind": "javascript",
+   "cls": "B",
+   "why": "两机制并存：.wbjn journal=JavaScript 语法，脚本 API=Python——枚举单选缺陷"
+  },
+  {
+   "tool": "ANSYS Workbench",
+   "field": "coupling",
+   "pub": "co_simulation",
+   "blind": "orchestration",
+   "cls": "C",
+   "why": "官方 FAQ'configure their simulation processes/automated data transfer'+定位'workflow platform'=orchestration；co_simulation 偏窄"
+  },
+  {
+   "tool": "ANSYS Workbench",
+   "field": "workflow_guide",
+   "pub": "true",
+   "blind": "false",
+   "cls": "A",
+   "why": "文档区向导证据不可及（帮助文档登录墙）"
+  },
+  {
+   "tool": "ANSYS Workbench",
+   "field": "template_support",
+   "pub": "true",
+   "blind": "false",
+   "cls": "A",
+   "why": "同上"
+  },
+  {
+   "tool": "ANSYS Workbench",
+   "field": "cloud_support",
+   "pub": "true",
+   "blind": "false",
+   "cls": "A",
+   "why": "远程提交云求解器证据不可及；FAQ'local workstation'仅指项目壳"
+  },
+  {
+   "tool": "ANSYS Workbench",
+   "field": "ai_ml",
+   "pub": "true",
+   "blind": "false",
+   "cls": "A",
+   "why": "平台级口径（集成 optiSLang AI/ML 优化）vs 本体口径——agent1 引文恰证平台口径成立"
+  },
+  {
+   "tool": "AutoForm",
+   "field": "ui_pattern",
+   "pub": "workbench",
+   "blind": "multi_tool",
+   "cls": "B",
+   "why": "workbench/multi_tool 语义重叠"
+  },
+  {
+   "tool": "AutoForm",
+   "field": "architecture",
+   "pub": "plugin_based",
+   "blind": "monolithic",
+   "cls": "B",
+   "why": "模块族 vs 单体两可"
+  },
+  {
+   "tool": "AutoForm",
+   "field": "scripting",
+   "pub": "python",
+   "blind": "none",
+   "cls": "A",
+   "why": "官方 Python API 文档不公开（营销页无 API 区），agent 拿不到"
+  },
+  {
+   "tool": "CST Studio Suite",
+   "field": "industry",
+   "pub": "motor_em",
+   "blind": "multiphysics",
+   "cls": "B",
+   "why": "电机主市场 vs 多物理全谱两可"
+  },
+  {
+   "tool": "CST Studio Suite",
+   "field": "architecture",
+   "pub": "plugin_based",
+   "blind": "monolithic",
+   "cls": "B",
+   "why": "studio 多求解器集成 vs 单包两可"
+  },
+  {
+   "tool": "CST Studio Suite",
+   "field": "coupling",
+   "pub": "single_kernel",
+   "blind": "co_simulation",
+   "cls": "B",
+   "why": "包内协同（官方术语 co-simulation）与单内核口径并存"
+  },
+  {
+   "tool": "FreeCAD",
+   "field": "workflow_guide",
+   "pub": "true",
+   "blind": "false",
+   "cls": "A",
+   "why": "官方 wiki 文档齐全，盲提漏检（非原文错）"
+  },
+  {
+   "tool": "LS-DYNA",
+   "field": "industry",
+   "pub": "multiphysics",
+   "blind": "structure_fea",
+   "cls": "B",
+   "why": "显式结构为主但含热/ICFD/CESE/EM/SPH——两可"
+  },
+  {
+   "tool": "LS-DYNA",
+   "field": "plugin_mechanism",
+   "pub": "none",
+   "blind": "custom",
+   "cls": "C",
+   "why": "用户自定义材料/子程序（重编译链接）为官方文档化扩展，none 偏严"
+  },
+  {
+   "tool": "LS-DYNA",
+   "field": "cloud_support",
+   "pub": "false",
+   "blind": "true",
+   "cls": "B",
+   "why": "Ansys Cloud 托管（agent 有 NASCAR 官方案例硬证据）vs 本体无云产品（原文口径）——托管口径建议 v1.2.0 计 true 并注明"
+  },
+  {
+   "tool": "MSC Nastran",
+   "field": "ui_technology",
+   "pub": "motif",
+   "blind": "custom",
+   "cls": "A",
+   "why": "Motif 为历史事实（原文有据）；Hexagon 全 403 agent 保守判 custom"
+  },
+  {
+   "tool": "MSC Nastran",
+   "field": "ui_pattern",
+   "pub": "multi_tool",
+   "blind": "single_doc",
+   "cls": "B",
+   "why": "MSC 生态（Patran+Nastran）vs Nastran 本体（单输入卡）口径两可"
+  },
+  {
+   "tool": "MSC Nastran",
+   "field": "coupling",
+   "pub": "co_simulation",
+   "blind": "single_kernel",
+   "cls": "B",
+   "why": "多学科耦合求解（sol 400 等）vs 单求解器本体口径两可"
+  },
+  {
+   "tool": "MSC Nastran",
+   "field": "cloud_support",
+   "pub": "true",
+   "blind": "false",
+   "cls": "A",
+   "why": "Hexagon 云证据 403 不可及，agent 自认保守"
+  },
+  {
+   "tool": "SALOME",
+   "field": "ui_pattern",
+   "pub": "workbench",
+   "blind": "tree_based",
+   "cls": "B",
+   "why": "Object Browser 树+多模块 desktop 两可"
+  },
+  {
+   "tool": "SALOME",
+   "field": "plugin_mechanism",
+   "pub": "custom",
+   "blind": "ipc_api",
+   "cls": "C",
+   "why": "官方架构页原文'based on CORBA'/'All components represent CORBA servers'/IDL=ipc_api 教科书案例，custom 应修"
+  },
+  {
+   "tool": "SALOME",
+   "field": "coupling",
+   "pub": "file_exchange",
+   "blind": "orchestration",
+   "cls": "C",
+   "why": "官方 Supervision 页：YACS workflow graph 连接计算单元+JobManager(PBS/LSF/SGE/SLURM)+ICoCo=orchestration，file_exchange 偏窄应修"
+  }
+ ],
+ "counts": {
+  "B": 17,
+  "A": 12,
+  "C": 5
+ },
+ "post_fix_projection": "修复 C 类 5 处后：pass3 一致率 79/108=73.1%；实质分歧（C）占 4.6%",
+ "validation_years": {
+  "within_+-5": 8,
+  "of": 9,
+  "note": "唯一超差=LS-DYNA：raw 37(按1989 LSTC 商业发行) vs blind 50(按1976 LLNL DYNA 起源)——参照点定义缺陷，v1.2.0 须在枚举定义中明确口径"
+ }
+}

@@ -1,0 +1,61 @@
+{
+  "pass": 3,
+  "blind": true,
+  "extractor": "agent3",
+  "tools": [
+    {
+      "tool_name": "LS-DYNA",
+      "source_url": "https://ansys.synopsys.com/products/structures/ansys-ls-dyna",
+      "category": "commercial",
+      "industry": "structure_fea",
+      "ui_technology": "custom",
+      "ui_pattern": "single_doc",
+      "architecture": "monolithic",
+      "plugin_mechanism": "custom",
+      "scripting": "command_file",
+      "coupling": "single_kernel",
+      "workflow_guide": false,
+      "template_support": false,
+      "cloud_support": true,
+      "ai_ml": false,
+      "validation_years": 50,
+      "notes": "主入口 lstc.com 重定向至 Ansys（现 Synopsys 域）；官方页正文：'Ansys LS-DYNA is the most used explicit simulation program in the world... response of materials to short periods of severe loading'，并列举 crash/bird strike/explosion 等显式结构应用 → commercial + structure_fea。官方页：'In November 2019, Ansys acquired LSTC, the authors of the explicit finite element code LS-DYNA'。产品为求解器，官方页未文档化任何自带 GUI 技术栈（前/后处理靠 LS-PrePost 等伴生工具）→ ui_technology=custom；工作流以单一 keyword 输入文件为核心 → ui_pattern=single_doc、scripting=command_file（枚举无 DMAP 类似物，keyword 输入卡即主自动化接口）。显式/隐式、结构/热/ICFD/CESE/EM/SPH 等 'LS-DYNA delivers' 于同一程序 → architecture=monolithic、coupling=single_kernel。扩展机制官方文档化为用户自定义材料/子程序（需重编译链接）→ plugin_mechanism=custom。cloud_support=true 依据官方 Cloud 页 NASCAR 案例：'verified the safety of its car design via numerically large Ansys LS-DYNA crash simulations using Ansys Cloud'（https://ansys.synopsys.com/products/cloud）。ai_ml=false：官方页无 LS-DYNA 内置 AI/ML（Ansys SimAI 为独立产品）。validation_years=50 (2026-1976)：官方页未提供起源年（LST 官网并入 Ansys、dynasupport.com 不可达、web.archive.org 本环境不可用）；1976 为业界公认 LS-DYNA 前身 DYNA 在 LLNL 由 Hallquist 起源之年，此字段证据等级低于其他字段（若按 LST 公司成立 1987 则为 39）。"
+    },
+    {
+      "tool_name": "MSC Nastran",
+      "source_url": "https://simulatemore.mscsoftware.com/",
+      "category": "commercial",
+      "industry": "structure_fea",
+      "ui_technology": "custom",
+      "ui_pattern": "single_doc",
+      "architecture": "monolithic",
+      "plugin_mechanism": "custom",
+      "scripting": "command_file",
+      "coupling": "single_kernel",
+      "workflow_guide": false,
+      "template_support": false,
+      "cloud_support": false,
+      "ai_ml": false,
+      "validation_years": 55,
+      "notes": "hexagon.com 主站 Cloudflare 403、任务给定产品路径 404；实际依据：nexus.hexagon.com 产品/文档页正文（'With over 50 years of real-world experience in finite element analysis (FEA), MSC Nastran is the most trusted FEA solver... a multidisciplinary structural analysis application used by engineers to perform static, dynamic, and thermal analysis across linear and nonlinear domains, complemented with automated structural optimization and award winning embedded fatigue analysis technologies'）→ commercial + structure_fea + coupling=single_kernel（结构/热/疲劳/优化同求解器）。官方博客 simulatemore.mscsoftware.com 2019-07-16 'Moon Landing' 文：'MSC was set up in 1963 by Richard MacNeal and Robert Schwendler... the core of MSC Nastran was the code that NASA used to structurally analyze the Apollo Space Program. In 1971, MSC Software released a commercial version of the same software.' → validation_years=2026-1971=55（首次公开文档化商业发布 1971）。产品为求解器，无自带 GUI（经典伴生前处理 Patran 属独立产品）→ ui_technology=custom；主工作流为单一输入卡文件（.bdf/.dat）→ ui_pattern=single_doc、scripting=command_file（求解器内部用户可编程语言 DMAP 不在枚举，记为 plugin_mechanism=custom 依据：DMAP 官方文档化扩展机制）。cloud_support=false：官方页面未能取证到 MSC Nastran 云版本（Hexagon 主站不可达、nexus 文档站抓取仅返回导航、官方博客站内无 cloud 文章）——证据缺失下的保守判定，非否定性证据。ai_ml=false：无内置 AI/ML 官方证据。"
+    },
+    {
+      "tool_name": "SALOME",
+      "source_url": "https://www.salome-platform.org",
+      "category": "open_source",
+      "industry": "open_cae",
+      "ui_technology": "qt",
+      "ui_pattern": "tree_based",
+      "architecture": "plugin_based",
+      "plugin_mechanism": "ipc_api",
+      "scripting": "python",
+      "coupling": "orchestration",
+      "workflow_guide": false,
+      "template_support": false,
+      "cloud_support": false,
+      "ai_ml": false,
+      "validation_years": 22,
+      "notes": "官网定位 'open source platform for numerical simulation'（LGPL，CEA/EDF/Open Cascade）→ open_source + open_cae。官方历史页：SALOME 1 项目 2000-09 启动（RNTL），'production of two industrial versions: SALOME V2 (2004) and SALOME V3 (2006)' → validation_years=2026-2004=22（页面上最早文档化发布版本为 2004；项目启动 2000，开源 LGPL 分发更晚）。ui_technology=qt：官方架构规范 PDF（docs.salome-platform.org/latest/extra/SALOME_GUI_Architecture.pdf，Open Cascade 出品）中 SUIT_TreeModel 类定义 'class SUIT_TreeModel : public QAbstractItemModel, public SUIT_AbstractModel' 并使用 Qt::ItemFlags/QVariant/QModelIndex → GUI 基于 Qt。ui_pattern：用户文档以 Object Browser（研究数据树）为贯穿所有模块的核心持久组件 + 多模块 desktop 切换 → 判 tree_based（multi_tool 特征亦存在，两可）。architecture=plugin_based：GUI 开发手册 'All Graphical User Interfaces of standard modules have plug-in structure, i.e. each module is placed in a dynamic library which is loaded on demand'，文档站列 meshing plug-in modules（Netgen/Gmsh/MG-* 等）。plugin_mechanism=ipc_api：官方架构页 'SALOME architecture is based on CORBA technology'、'All components represent CORBA servers'、'IDL... ensuring CORBA's language independence... interfaces described in IDL can be mapped to any programming language' → 进程间语言无关组件接口；另有 GUI 内 python plugins 辅助机制。scripting=python：官网 'All functionalities are accessible through the programmatic integrated Python console'，GUI Python Interpreter 可 dump study 为 Python 脚本。coupling=orchestration：官方 Supervision 页 'SALOME provides a set of services to create a simulation workflow that connects different computation units... workflow is defined as a graph of connected SALOME components'（YACS + JobManager 支持 PBS/LSF/SGE/SLURM），开发者文档含 ICoCo code coupling 接口。workflow_guide/template_support/cloud_support/ai_ml 均无官方证据 → false（ADAO 为数据同化与优化，不计 AI/ML）。最新版 9.16.0（2026-09-15）。"
+    }
+  ]
+}

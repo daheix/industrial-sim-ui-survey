@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Verify every headline claim in main_rebuild.tex against tool_survey_raw.json (v1.1)."""
+"""Verify every headline claim in main_rebuild.tex against tool_survey_raw.json (v1.2)."""
 import json, re, collections, math
 from math import comb
 
@@ -57,17 +57,23 @@ has(f"{med_o:g} years for open-source tools (range {rng_o[0]}--{rng_o[1]})")
 for k, v in feat.items():
     lbl = {'workflow_guide': 'guided workflows', 'template_support': 'simulation templates',
            'cloud_support': 'Cloud deployment', 'ai_ml': 'AI/ML-assisted features'}[k]
-    if k == 'cloud_support': has(f"Cloud deployment is available in {pct(v,n)}\\%")
-    elif k == 'ai_ml': has(f"AI/ML-assisted features in {pct(v,n)}\\%")
-    elif k == 'workflow_guide': has(f"guided workflows in {pct(v,n)}\\%")
-    else: has(f"simulation templates in {pct(v,n)}\\%")
+    if k == 'cloud_support': has(f"{pct(v,n)}\\% offer cloud deployment")
+    elif k == 'ai_ml': has(f"{pct(v,n)}\\% offer AI/ML-assisted features")
+    elif k == 'workflow_guide': has(f"{pct(v,n)}\\% support guided workflows")
+    else: has(f"{pct(v,n)}\\% provide simulation templates")
 
-# coupling numbers (rewritten paragraph)
-for k, cnt in [('single_kernel', 17), ('file_exchange', 14), ('co_simulation', 12),
-               ('orchestration', 2), ('rom', 1)]:
+# coupling numbers (rewritten paragraph) — v1.2.0: SALOME/YACS + Workbench -> orchestration
+for k, cnt in [('single_kernel', 17), ('file_exchange', 13), ('co_simulation', 11),
+               ('orchestration', 4), ('rom', 1)]:
     assert cpl[k] == cnt, (k, cpl[k])
     has(f"({cnt} tools, {pct(cnt)}\\%)" if k != 'rom' else f"({cnt} tool, {pct(cnt)}\\%)",
         f"coupling {k} = {cnt}")
+
+# v1.2.0: ipc_api now 2 (KiCad + SALOME per official CORBA architecture doc)
+plug_ipc = sum(1 for t in tools if t['plugin_mechanism'] == 'ipc_api')
+assert plug_ipc == 2, plug_ipc
+has("only 2 of 46")
+has("SALOME (CORBA servers with IDL interfaces")
 
 # chi2 + Fisher
 def chi2(a, b, c, e):
@@ -107,10 +113,11 @@ for s in [r"custom C/C++ interfaces account for 73.9", r"86.5\%",
           "Nastran, LS-DYNA, ADAMS", "We identified nine", "We identified five",
           "highest performance", "strongest isolation", "while comprehensive",
           "reveals several important findings", "OSGi, custom, IPC API",
-          "Years of industrial use", r"(16 tools", r"(11 tools",
+          "Years of industrial use", r"(16 tools", r"(12 tools",
           r"50.0\% of tools", r"cloud support (50.0", r"67.4\%", r"15.2\%",
           "Single-kernel strong coupling} (14 tools", "AI/ML-assisted features in 37.0",
           "textcolor{red}", "candidateB", "候选B", "查重记录见", "Zenodo",
+          "of 46 tools (2.2", "Eclipse-RCP-style module systems (SALOME",
           "plugin extensibility, Python API"]:
     absent(s)
 

@@ -1,0 +1,301 @@
+{
+  "pass": 3,
+  "n_tools": 9,
+  "fields": [
+    "category",
+    "industry",
+    "ui_technology",
+    "ui_pattern",
+    "architecture",
+    "plugin_mechanism",
+    "scripting",
+    "coupling",
+    "workflow_guide",
+    "template_support",
+    "cloud_support",
+    "ai_ml"
+  ],
+  "total_agreement": {
+    "pairs": 108,
+    "agree": 74,
+    "rate": 0.6852
+  },
+  "per_field": {
+    "category": {
+      "n": 9,
+      "agree": 1.0,
+      "kappa": 1.0,
+      "interpretable": "almost_perfect"
+    },
+    "industry": {
+      "n": 9,
+      "agree": 0.6667,
+      "kappa": 0.5781,
+      "interpretable": "moderate"
+    },
+    "ui_technology": {
+      "n": 9,
+      "agree": 0.7778,
+      "kappa": 0.617,
+      "interpretable": "substantial"
+    },
+    "ui_pattern": {
+      "n": 9,
+      "agree": 0.5556,
+      "kappa": 0.4857,
+      "interpretable": "moderate"
+    },
+    "architecture": {
+      "n": 9,
+      "agree": 0.5556,
+      "kappa": 0.28,
+      "interpretable": "fair"
+    },
+    "plugin_mechanism": {
+      "n": 9,
+      "agree": 0.5556,
+      "kappa": -0.125,
+      "interpretable": "poor"
+    },
+    "scripting": {
+      "n": 9,
+      "agree": 0.7778,
+      "kappa": 0.6538,
+      "interpretable": "substantial"
+    },
+    "coupling": {
+      "n": 9,
+      "agree": 0.4444,
+      "kappa": 0.2373,
+      "interpretable": "fair"
+    },
+    "workflow_guide": {
+      "n": 9,
+      "agree": 0.6667,
+      "kappa": 0.3721,
+      "interpretable": "fair"
+    },
+    "template_support": {
+      "n": 9,
+      "agree": 0.8889,
+      "kappa": 0.7692,
+      "interpretable": "substantial"
+    },
+    "cloud_support": {
+      "n": 9,
+      "agree": 0.4444,
+      "kappa": 0.0,
+      "interpretable": "poor"
+    },
+    "ai_ml": {
+      "n": 9,
+      "agree": 0.8889,
+      "kappa": 0.0,
+      "interpretable": "poor"
+    }
+  },
+  "validation_years": {
+    "tolerance": 5,
+    "within": 8,
+    "detail": [
+      {
+        "tool": "actran",
+        "published": 24,
+        "blind": 26,
+        "within_tol": true
+      },
+      {
+        "tool": "ansys motor-cad",
+        "published": 27,
+        "blind": 27,
+        "within_tol": true
+      },
+      {
+        "tool": "ansys workbench",
+        "published": 26,
+        "blind": 26,
+        "within_tol": true
+      },
+      {
+        "tool": "autoform",
+        "published": 31,
+        "blind": 31,
+        "within_tol": true
+      },
+      {
+        "tool": "cst studio suite",
+        "published": 20,
+        "blind": 20,
+        "within_tol": true
+      },
+      {
+        "tool": "freecad",
+        "published": 24,
+        "blind": 24,
+        "within_tol": true
+      },
+      {
+        "tool": "ls-dyna",
+        "published": 37,
+        "blind": 50,
+        "within_tol": false
+      },
+      {
+        "tool": "msc nastran",
+        "published": 55,
+        "blind": 55,
+        "within_tol": true
+      },
+      {
+        "tool": "salome",
+        "published": 26,
+        "blind": 22,
+        "within_tol": true
+      }
+    ]
+  },
+  "per_tool": [
+    {
+      "tool": "actran",
+      "n_field_diffs": 6,
+      "diffs": [
+        "industry: published='structure_fea' blind='multiphysics'",
+        "ui_technology: published='python' blind='java'",
+        "ui_pattern: published='single_doc' blind='tree_based'",
+        "architecture: published='monolithic' blind='layered'",
+        "plugin_mechanism: published='none' blind='custom'",
+        "cloud_support: published=True blind=False"
+      ],
+      "years": {
+        "tool": "actran",
+        "published": 24,
+        "blind": 26,
+        "within_tol": true
+      }
+    },
+    {
+      "tool": "ansys motor-cad",
+      "n_field_diffs": 5,
+      "diffs": [
+        "architecture: published='layered' blind='monolithic'",
+        "plugin_mechanism: published='custom' blind='ipc_api'",
+        "coupling: published='single_kernel' blind='co_simulation'",
+        "workflow_guide: published=True blind=False",
+        "cloud_support: published=True blind=False"
+      ],
+      "years": {
+        "tool": "ansys motor-cad",
+        "published": 27,
+        "blind": 27,
+        "within_tol": true
+      }
+    },
+    {
+      "tool": "ansys workbench",
+      "n_field_diffs": 6,
+      "diffs": [
+        "scripting: published='python' blind='javascript'",
+        "coupling: published='co_simulation' blind='orchestration'",
+        "workflow_guide: published=True blind=False",
+        "template_support: published=True blind=False",
+        "cloud_support: published=True blind=False",
+        "ai_ml: published=True blind=False"
+      ],
+      "years": {
+        "tool": "ansys workbench",
+        "published": 26,
+        "blind": 26,
+        "within_tol": true
+      }
+    },
+    {
+      "tool": "autoform",
+      "n_field_diffs": 3,
+      "diffs": [
+        "ui_pattern: published='workbench' blind='multi_tool'",
+        "architecture: published='plugin_based' blind='monolithic'",
+        "scripting: published='python' blind='none'"
+      ],
+      "years": {
+        "tool": "autoform",
+        "published": 31,
+        "blind": 31,
+        "within_tol": true
+      }
+    },
+    {
+      "tool": "cst studio suite",
+      "n_field_diffs": 3,
+      "diffs": [
+        "industry: published='motor_em' blind='multiphysics'",
+        "architecture: published='plugin_based' blind='monolithic'",
+        "coupling: published='single_kernel' blind='co_simulation'"
+      ],
+      "years": {
+        "tool": "cst studio suite",
+        "published": 20,
+        "blind": 20,
+        "within_tol": true
+      }
+    },
+    {
+      "tool": "freecad",
+      "n_field_diffs": 1,
+      "diffs": [
+        "workflow_guide: published=True blind=False"
+      ],
+      "years": {
+        "tool": "freecad",
+        "published": 24,
+        "blind": 24,
+        "within_tol": true
+      }
+    },
+    {
+      "tool": "ls-dyna",
+      "n_field_diffs": 3,
+      "diffs": [
+        "industry: published='multiphysics' blind='structure_fea'",
+        "plugin_mechanism: published='none' blind='custom'",
+        "cloud_support: published=False blind=True"
+      ],
+      "years": {
+        "tool": "ls-dyna",
+        "published": 37,
+        "blind": 50,
+        "within_tol": false
+      }
+    },
+    {
+      "tool": "msc nastran",
+      "n_field_diffs": 4,
+      "diffs": [
+        "ui_technology: published='motif' blind='custom'",
+        "ui_pattern: published='multi_tool' blind='single_doc'",
+        "coupling: published='co_simulation' blind='single_kernel'",
+        "cloud_support: published=True blind=False"
+      ],
+      "years": {
+        "tool": "msc nastran",
+        "published": 55,
+        "blind": 55,
+        "within_tol": true
+      }
+    },
+    {
+      "tool": "salome",
+      "n_field_diffs": 3,
+      "diffs": [
+        "ui_pattern: published='workbench' blind='tree_based'",
+        "plugin_mechanism: published='custom' blind='ipc_api'",
+        "coupling: published='file_exchange' blind='orchestration'"
+      ],
+      "years": {
+        "tool": "salome",
+        "published": 26,
+        "blind": 22,
+        "within_tol": true
+      }
+    }
+  ]
+}

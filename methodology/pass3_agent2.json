@@ -1,0 +1,67 @@
+{
+  "pass": 3,
+  "blind": true,
+  "extractor": "agent2",
+  "tools": [
+    {
+      "tool_name": "AutoForm",
+      "source_url": "https://www.autoform.com/en/products/autoform-forming/autoform-explorer/",
+      "category": "commercial",
+      "industry": "manufacturing",
+      "ui_technology": "custom",
+      "ui_pattern": "multi_tool",
+      "architecture": "monolithic",
+      "plugin_mechanism": "custom",
+      "scripting": "none",
+      "coupling": "single_kernel",
+      "workflow_guide": true,
+      "template_support": true,
+      "cloud_support": true,
+      "ai_ml": false,
+      "validation_years": 31,
+      "notes": "钣金成形/白车身装配仿真商业软件，按工艺链划分多专用模块（Explorer/DieDesigner/Sigma/Compensator 等）。validation_years=31：官方 Innovations 年表首条 1995 'Rapid and Accurate Stamping Simulation'（https://www.autoform.com/en/about-us/innovations/），who-we-are 页亦载 1995 年成立于苏黎世。workflow_guide=true：Explorer 页 'Easy workflow-based navigation concept'。template_support=true：2012 创新 'Usage of Company Standards'，Explorer 页 'Usage and management of company standards'。plugin_mechanism=custom：FormingSolver 官方 Plug-In（AutoForm-Thermo/PhaseChange/TriboForm）。coupling=single_kernel：各模块共用同一 FormingSolver 内核，热/相变以内嵌 Plug-In 实现，非联合仿真。architecture=monolithic：封闭商业套件，2021 创新 'Single software platform'，无公开 SDK。scripting=none：官网未见脚本/API 文档。ui_technology=custom：官网未披露 UI 框架。cloud_support=true：官方 Cloud Offerings（AutoForm-CarBodyPlanner 云版、EasyBlank Cloud）。ai_ml=false：产品/创新页均无 AI/ML 表述。"
+    },
+    {
+      "tool_name": "CST Studio Suite",
+      "source_url": "https://www.3ds.com/products/simulia/cst-studio-suite/electromagnetic-design-environment",
+      "category": "commercial",
+      "industry": "multiphysics",
+      "ui_technology": "custom",
+      "ui_pattern": "ribbon",
+      "architecture": "monolithic",
+      "plugin_mechanism": "custom",
+      "scripting": "vba",
+      "coupling": "co_simulation",
+      "workflow_guide": true,
+      "template_support": true,
+      "cloud_support": true,
+      "ai_ml": false,
+      "validation_years": 20,
+      "notes": "主入口 https://www.3ds.com/products/simulia/cst-studio-suite （FAQ 载 2006 年 CST MWS 等软件集成为 CST Studio Suite；2016 年达索收购 CST）。ui_pattern=ribbon：官方原文 'The ribbon-based interface uses tabs to display all the tools and options... grouping them according to their position in the workflow'。workflow_guide=true：同页 'the Project Wizard and the QuickStart Guide provide guidance to new users'。template_support=true：同页 'The post-processing templates... versatile general-purpose templates for creating custom workflows'。coupling=co_simulation：主入口 'The solvers can be coupled to perform hybrid simulations'；SAM 页 Hybrid Solver Task/EM-circuit co-simulation/multiphysics 链。industry=multiphysics：核心 3D EM，覆盖天线/EMC/电机/热等多应用域，官方强调多求解器耦合与 multiphysics 支持。architecture=monolithic：主入口 'Electromagnetic field solvers... are contained within a single user interface'。plugin_mechanism=custom、scripting=vba：官方手册 PDF（3ds.com/assets/invest/2024-03/simulia-cst-studio-suite-brochure.pdf）'openness to run any custom plug-ins or scripts'；宏语言为 VBA（官方帮助文档，产品网页未明示语言）。ui_technology=custom：官方仅称自研设计环境，未披露 UI 框架。cloud_support=true：brochure 'Cloud compute: All-in-one scalable solution'，且技术直接入 3DEXPERIENCE 平台。ai_ml=false：官方页无 AI/ML 表述，优化器为 CMA-ES/GA/PSO/TRF 等经典算法。validation_years=20：按官方 FAQ，Suite 产品 2006 年集成首发；备选口径为 MWS 1998 首发(28)或公司 1992 成立(34)。"
+    },
+    {
+      "tool_name": "FreeCAD",
+      "source_url": "https://wiki.freecad.org/History",
+      "category": "open_source",
+      "industry": "open_cae",
+      "ui_technology": "qt",
+      "ui_pattern": "workbench",
+      "architecture": "plugin_based",
+      "plugin_mechanism": "custom",
+      "scripting": "python",
+      "coupling": "file_exchange",
+      "workflow_guide": false,
+      "template_support": false,
+      "cloud_support": false,
+      "ai_ml": false,
+      "validation_years": 24,
+      "notes": "通用开源参数化 3D CAD（LGPL）。validation_years=24：官方 History 页 0.0.1 版 2002-10-29 'Initial Upload of a version'（0.1=2003-01-27，1.0=2024-11-18）；备选口径为项目 2001 年启动(25)。ui_pattern=workbench：Workbenches 页 'based on the concept of Workbench... When you switch from one workbench to another, the tools available on the interface change'。ui_technology=qt、scripting=python：About 页依赖 'Qt, the world-famous user interface framework' 与 'Python, a modern scripting language'（OCCT 内核+Coin3D）。architecture=plugin_based：About 页 'modular software architecture making it possible to provide additional functionality without modifying the core system'，工作台/模块可动态加载。plugin_mechanism=custom：经官方 Addon Manager 安装 Python 工作台/宏（freecad.org/addons.php），非 OSGi/IPC。coupling=file_exchange：FEM 工作台 'running an external solver from within FreeCAD'（CalculiX/Elmer/Mystran/Z88，网格 Gmsh/Netgen 亦外部）。workflow_guide=false、template_support=false、cloud_support=false、ai_ml=false：官方 wiki 未见向导式流程/项目工程模板/云服务/内置 AI-ML 能力表述（Document_templates 页不存在；TechDraw 图纸模板属绘图模板）。",
+      "source_urls_also": [
+        "https://wiki.freecad.org/Workbenches",
+        "https://wiki.freecad.org/About_FreeCAD",
+        "https://wiki.freecad.org/FEM_Workbench",
+        "https://www.freecad.org/addons.php"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "pass": 3,
+  "blind": true,
+  "extractor": "agent1",
+  "environment_note": "提取时间 2026-10-03。本环境限制：www.ansys.com 整站 301 重定向至 ansys.synopsys.com（Synopsys 收购 Ansys 后迁移）；Siemens 官网 Actran 专属页与 sitemap 中均无 Actran（已核对 2 份站点地图）；docs.sw.siemens.com/support.sw.siemens.com/hexagon.com/mscsoftware.com 均 403 或阻断；web.archive.org/搜索引擎不可用。mscsoftware.com/actran 301→hexagon.com/company/divisions/manufacturing-intelligence/msc-software（证实 Actran 现属 Hexagon，但其页面不可达）。web_search 仅返回学术源，无通用网页结果。",
+  "tools": [
+    {
+      "tool_name": "ANSYS Motor-CAD",
+      "source_url": "https://ansys.synopsys.com/products/electronics/ansys-motor-cad",
+      "category": "commercial",
+      "industry": "motor_em",
+      "ui_technology": "custom",
+      "ui_pattern": "template_driven",
+      "architecture": "monolithic",
+      "plugin_mechanism": "ipc_api",
+      "scripting": "python",
+      "coupling": "co_simulation",
+      "workflow_guide": false,
+      "template_support": true,
+      "cloud_support": false,
+      "ai_ml": false,
+      "validation_years": 27,
+      "notes": "依据官方产品页 https://ansys.synopsys.com/products/electronics/ansys-motor-cad（原 www.ansys.com 主入口 301 重定向至此）。(1) template_driven：页面原文 'Motor-CAD's intuitive, template-based setup simplifies and automates the analysis process'；Quick Specs 'Template-based magnetic topologies / Template-based cooling topologies'；'Comprehensive and powerful geometry templates enable the complete electric machine design space to be explored'。(2) monolithic：'its built-in electromagnetic, thermal and mechanical solvers offer valuable multiphysics insights'（内置电磁/热/机械求解器的专用单体工具）。(3) scripting=python：页面 'enhanced Python data-transfer'；官方 GitHub 仓库 ansys/pymotorcad README：'PyMotorCAD uses a Python JSON-RPC (remote procedure call) interface for Motor-CAD to launch or connect with a Motor-CAD instance, either locally or from a remote machine via HTTP'。(4) plugin_mechanism=ipc_api：同上 README，Motor-CAD 对外暴露语言无关的 JSON-RPC over HTTP 进程间 API（可本地或远程连接）。(5) coupling=co_simulation：'Electromagnetic-Thermal-Control Coupling Simulation'；'Ansys Maxwell-Motor-CAD integration'；'For electric machine noise and vibration ... integrates with Mechanical and VRXPERIENCE. It also connects with Ansys CFD solvers ... provides feedback into the Motor-CAD's thermal model'。(6) cloud/ai_ml=false：页面无任何 cloud/SaaS/AI/ML/机器学习字样（Cloud、AI 仅出现在全站导航，非本产品特性）。(7) workflow_guide=false：官方页描述 template-based setup，但未描述分步向导。(8) validation_years=27：官方新闻稿 https://ansys.synopsys.com/news-center/press-releases/10-08-19-ansys-strengthens-electric-machine-design-offerings-agreement-motor-design-ltd（2019-10-08）原文 'Motor Design, Ltd. was founded in 1999, and is headquartered in Wrexham, U.K.'；2022-05-04 收购新闻稿（.../5-4-22-...acquisition-of-motor-design-limited）确认 Motor-CAD 为 MDL 核心产品。公司 1999 年成立即围绕该产品，取首次公开发布≈1999 → 2026-1999=27。注：官方页未逐字给出产品首发年，存在 ±2 年不确定性。(9) ui_technology=custom：官方页与 PyMotorCAD 仓库均未披露 UI 技术栈，无法归入 qt/wpf/electron/java 等枚举，按无证据取 custom。"
+    },
+    {
+      "tool_name": "ANSYS Workbench",
+      "source_url": "https://ansys.synopsys.com/products/workbench",
+      "category": "commercial",
+      "industry": "multiphysics",
+      "ui_technology": "custom",
+      "ui_pattern": "schematic",
+      "architecture": "plugin_based",
+      "plugin_mechanism": "custom",
+      "scripting": "javascript",
+      "coupling": "orchestration",
+      "workflow_guide": false,
+      "template_support": false,
+      "cloud_support": false,
+      "ai_ml": false,
+      "validation_years": 26,
+      "notes": "依据官方页 https://ansys.synopsys.com/products/workbench（标语 'Personal Project Platform for Managing All Your Ansys Products'；原主入口 www.ansys.com/products/platform 301→ /products/connect，内容同族）。(1) schematic：FAQ 原文 'The project schematic enables users to configure their simulation processes, optimize exploration through parametric management, submit jobs to solver both locally and remote, and add APIs that allow for third-party software'；'Easily manage data across all your Ansys products / Save time with automated data transfer / Integrate multiple analyses within a single interface'；CAD 可直接拖拽进 project schematic。(2) industry=multiphysics：'Ansys Workbench is the integration and workflow platform that connects Ansys products'，关联产品横跨 Mechanical/LS-DYNA/Fluent/CFX/Sherlock/optiSLang 等所有物理域；'Included with all physics-based Ansys software bundles'。(3) architecture=plugin_based：集成平台按接入应用组织（'connects Ansys products ... add APIs that allow for third-party software'），第三方软件可经 API 接入。(4) plugin_mechanism=custom：接入走 Ansys 专有 API/SDK，非 OSGi、非语言无关进程间 API。(5) scripting=javascript（低-中置信度）：Workbench 以 journal 文件录制/回放项目操作（.wbjn，采用 JavaScript 语法）——该机制见官方帮助文档但本环境登录墙不可达；官方页仅称 'add APIs'，故此值为基于产品史通行认知的判断，非本次可核官方原文。(6) coupling=orchestration：定位即 'integration and workflow platform'，项目 schematic 编排多产品流程与自动数据传递。(7) cloud=false：FAQ 明示 'all on a user's local workstation'（页面仅提及 SPDM 产品 Ansys Minerva 支持云，非 Workbench 本体）。(8) ai_ml=false：页面 AI/ML 字样仅出现在 optiSLang 产品卡（'AI/ML based design optimization'），非 Workbench 本体。(9) workflow_guide=false、template_support=false：官方页未记载向导或工程模板。(10) validation_years=26：官方页无首发年；about-ansys 无时间线、新闻稿仅收录 2019 起、存档站与搜索引擎不可达，无法核到官方年份页。按通行产品史 Workbench 1.0 于 2000 年发布取 2026-2000=26，显式标注低置信（±3 年）。"
+    },
+    {
+      "tool_name": "Actran",
+      "source_url": "https://plm.sw.siemens.com/en-US/simcenter/simulation-test/acoustic-simulation/",
+      "category": "commercial",
+      "industry": "multiphysics",
+      "ui_technology": "java",
+      "ui_pattern": "tree_based",
+      "architecture": "layered",
+      "plugin_mechanism": "custom",
+      "scripting": "python",
+      "coupling": "file_exchange",
+      "workflow_guide": false,
+      "template_support": false,
+      "cloud_support": false,
+      "ai_ml": false,
+      "validation_years": 26,
+      "notes": "证据受限说明：任务给定主入口 plm.automation.siemens.com/.../simcenter/actran.html 返回 404；Siemens 两份官方站点地图（plm.automation.siemens.com 与 plm.sw.siemens.com）中不存在任何 Actran 页面；官方声学仿真页 https://plm.sw.siemens.com/en-US/simcenter/simulation-test/acoustic-simulation/（200）全文及嵌入数据均无 'Actran' 字样；docs.sw.siemens.com（robots Disallow /，API 阻断）、support.sw.siemens.com（403）、hexagon.com 全站（403）、mscsoftware.com（仅证实 301→hexagon.com MSC 部门页，正文 403）均不可达；web.archive.org DNS 不可达。因此本工具的多数字段只能基于官方域内间接证据与产品史通行认知填写，置信度整体低于另两个工具。(1) category=commercial：Siemens/Hexagon 商业产品线。(2) industry=multiphysics：Actran 为声学/振动声学（vibro-acoustics）有限元仿真软件，官方枚举无 acoustics 项，取最接近的 multiphysics（声-固-流耦合）。(3) ui_technology=java（低置信度）：Actran VI 前后处理器按产品史认知为 Java 应用（随附 JRE），无官方页可核。(4) ui_pattern=tree_based（低置信度）：Actran VI 以模型树/分支组织仿真流程。(5) architecture=layered：前处理（Actran VI）→ 求解器（命令行内核）→ 后处理的分层管线。(6) plugin_mechanism=custom：求解器支持用户子程序等专有扩展，非 OSGi/IPC。(7) scripting=python（低置信度）：Actran VI 提供 Python 自动化脚本接口（产品史认知，官方文档不可达）。(8) coupling=file_exchange：气动声学与结构声学典型链路为 CFD 流场/结构模态结果文件导入求解。(9) workflow_guide/template_support/cloud/ai_ml 均=false：无任何官方页记载这些能力。(10) validation_years=26：无官方年份页可达；按通行产品史 Actran 商业化首发约 2000 年（开发商 Free Field Technologies，1997 年成立，2013 年入 MSC.Software，2017 年随 Hexagon），取 2026-2000=26，显式标注低置信（±3 年）。"
+    }
+  ]
+}
