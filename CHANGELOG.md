@@ -18,7 +18,7 @@ Correction round after an independent third blind re-extraction of a fresh 9-too
 - `methodology/pass3_agent{1,2,3}.json` — raw blind extractions of 9 tools (LS-DYNA, MSC Nastran, SALOME, Motor-CAD, ANSYS Workbench, Actran, AutoForm, CST Studio Suite, FreeCAD).
 - `methodology/pass3_agreement_result.json` — raw third-pass exact agreement **68.5% (74/108)** vs. released v1.1.0; per-field κ from −0.125 (`plugin_mechanism`, near-constant variant breaks κ) to 1.0 (`category`).
 - `methodology/pass3_adjudication.json` — all 34 disagreements classified: A=12 (released value documented, blind extraction could not reach the evidence), B=17 (enum-boundary ties → coding rules added, values unchanged), C=5 (released value wrong → corrected above). Post-adjudication pass-3 agreement **73.1% (79/108)**; substantive disagreement rate 4.6%.
-- `methodology/compare_pass3.py` — third-pass comparison script; `methodology/verify_claims.py` updated to the v1.2 headline numbers (72 checks).
+- `methodology/compare_pass3.py` — third-pass comparison script; `methodology/verify_claims.py` updated to the v1.2 headline numbers (79 checks).
 
 ### Validation-years note
 
@@ -26,7 +26,7 @@ Correction round after an independent third blind re-extraction of a fresh 9-too
 
 ### Impact
 
-Coupling distribution in the accompanying paper changes from 17/14/12/2/1 to 17/13/11/4/1; language-agnostic IPC-API tools change from 1/46 to 2/46. All paper statistics were recomputed from v1.2 (`verify_claims.py`: 72 passed, 0 failed).
+Coupling distribution in the accompanying paper changes from 17/14/12/2/1 to 17/13/11/4/1; language-agnostic IPC-API tools change from 1/46 to 2/46. All paper statistics were recomputed from v1.2 (`verify_claims.py`: 79 passed, 0 failed).
 
 ## v1.1.0 (2026-09-27)
 

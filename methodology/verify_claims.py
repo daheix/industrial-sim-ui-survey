@@ -75,6 +75,15 @@ assert plug_ipc == 2, plug_ipc
 has("only 2 of 46")
 has("SALOME (CORBA servers with IDL interfaces")
 
+# v1.2.0: effect sizes + third-round retest + kappa table
+has(r"odds ratio $=18.1$, 95\% CI $2.99$--$109.2$; Cram\'er's $V=0.54$")
+has(r"Cram\'er's $V<0.01$")
+has(r"raw agreement was 68.5\% (74/108")
+has("73.1\\% (79/108)")
+has("68.1\\% (147/216)")
+has("Table~\\ref{tab:kappa}")
+has("\\label{tab:kappa}")
+
 # chi2 + Fisher
 def chi2(a, b, c, e):
     N = a + b + c + e
